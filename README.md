@@ -1,6 +1,4 @@
-# Low-rank Inference and Training Efficiency for Edge Computing (LITE-LSTM)
-
-
+# Low-rank Inference and Training Efficiency for Edge Computing (LITE-Edge)
 
 ## Train
 
