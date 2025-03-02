@@ -1,0 +1,4735 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="2in"
+   height="1.5in"
+   viewBox="0 0 50.8 38.1"
+   version="1.1"
+   id="svg52550"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="LSTM.svg"
+   inkscape:export-filename="LSTM.png"
+   inkscape:export-xdpi="800"
+   inkscape:export-ydpi="800"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs52544">
+    <marker
+       style="overflow:visible"
+       id="marker77343"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path77341" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker77343-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path77341-1" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       style="overflow:visible"
+       id="Arrow1Lend-3">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         id="path5302" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       style="overflow:visible"
+       id="marker53252">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         id="path53250" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       style="overflow:visible"
+       id="marker53256">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         id="path53254" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       style="overflow:visible"
+       id="marker53260">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         id="path53258" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       style="overflow:visible"
+       id="marker53264">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         id="path53262" />
+    </marker>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8078">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.0385221;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 1.1451527,-19.124411 -4.0431672,1.244365 -0.016542,0.206706 0.074416,0.152956 0.053749,0.07029 3.9352368,-0.150846 2.369301,-0.327406 11.9108237,1.411932 0.432639,0.05264 0.549575,-0.01175 0.362486,1.596102 0.128614,0.105232 0.876981,0.245551 0.520335,0.006 5.103618,-0.161608 1.616438,-0.64492 2.563146,-1.355995 7.092909,-1.158295 1.064063,-0.292327 0.795131,-0.05264 12.057474,-1.440249 0.818549,-0.190158 0.43822,-0.165373 0.214974,-0.13229 2.885613,-1.806609 0.09508,-0.140563 0.0084,-0.161224 -0.07441,-0.198432 -0.198438,-0.148832 -0.18604,-0.03723 -21.831704,-1.475634 -2.662372,-0.06615 -8.206956,-0.05804 -4.70881,-2.366196 -4.650637,0.352786 -0.11781,0.03927 c 0,0 -0.05372,0.08268 -0.05372,0.09096 0,0.0084 -0.01451,0.173623 -0.01451,0.173623 l 0.888834,2.052584 -2.4763315,0.227378 -0.231509,0.04551 -0.3514003,0.05582 -0.1033559,0.04958 -1.4439664,0.582766 -0.3337018,-0.187964 -0.1488315,-0.02482 -4.6054006,0.316261 -0.090957,0.03723 c 0,0 -0.041309,0.06409 -0.045506,0.08063 -0.0042,0.01655 -0.024821,0.140558 -0.024821,0.152957 0,0.01247 0.00612,0.09508 0.014509,0.121954 0.00815,0.02686 0.6934058,1.475502 0.6934058,1.475502 l -0.292315,0.248476 c 0,0 -0.2075391,0.147627 -0.2163105,0.166614 -0.00881,0.01907 -0.1724656,0.16225 -0.1768603,0.169546 -0.0042,0.0073 -0.2042836,0.308695 -0.2042836,0.323162 0,0.01451 -0.086808,0.16123 -0.086808,0.183977 0,0.02272 -0.037232,0.142626 -0.030997,0.165373 0.00612,0.02272 -0.0018,0.115748 -0.0018,0.142626 0,0.02686 -0.016547,0.16743 -0.0042,0.210849 0.012471,0.04341 0.070291,0.198432 0.070291,0.198432 z"
+         id="path8080"
+         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccsccccccccccccscccccsscsscc" />
+    </clipPath>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         inkscape:connector-curvature="0"
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-3" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-7-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-6-1"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-7-6-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-6-9-8"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-7-6-4-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-6-9-7-2"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-7-6-43-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-6-9-0-6"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-77-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-2-0"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-77-0-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-2-9-3"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-77-0-0-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-2-9-1-0"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-77-0-8-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-2-9-0-2"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-77-7-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-2-2-0"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-77-3-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-2-7-3"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-77-8-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-2-1-52"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-77-8-3-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-2-1-5-9"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-7-6-43-8-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-6-9-0-0-0"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-7-7-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-6-91-7"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-7-6-43-8-3-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-6-9-0-0-5-3"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-7-8-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-6-4-20"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-7-8-7-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-6-4-2-1"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-7-6-43-8-33-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-6-9-0-0-9-4"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <clipPath
+       id="clip5-6">
+      <path
+         d="m 303.96094,174.18359 h 56.71484 V 235.75 h -56.71484 z m 0,0"
+         id="path1999-5" />
+    </clipPath>
+    <linearGradient
+       id="linear0"
+       gradientUnits="userSpaceOnUse"
+       x1="-60.25"
+       y1="0"
+       x2="60.25"
+       y2="0"
+       gradientTransform="matrix(0,0.51093,-0.51093,0,332.31883,204.96695)">
+      <stop
+         offset="0"
+         style="stop-color:rgb(100%,100%,100%);stop-opacity:1;"
+         id="stop2002" />
+      <stop
+         offset="0.00390625"
+         style="stop-color:rgb(99.607849%,99.607849%,99.607849%);stop-opacity:1;"
+         id="stop2004" />
+      <stop
+         offset="0.0078125"
+         style="stop-color:rgb(99.215698%,99.215698%,99.215698%);stop-opacity:1;"
+         id="stop2006" />
+      <stop
+         offset="0.0117188"
+         style="stop-color:rgb(99.215698%,99.215698%,99.215698%);stop-opacity:1;"
+         id="stop2008" />
+      <stop
+         offset="0.015625"
+         style="stop-color:rgb(99.215698%,99.215698%,99.215698%);stop-opacity:1;"
+         id="stop2010" />
+      <stop
+         offset="0.0195313"
+         style="stop-color:rgb(98.823547%,98.823547%,98.823547%);stop-opacity:1;"
+         id="stop2012" />
+      <stop
+         offset="0.0234375"
+         style="stop-color:rgb(98.431396%,98.431396%,98.431396%);stop-opacity:1;"
+         id="stop2014" />
+      <stop
+         offset="0.0273438"
+         style="stop-color:rgb(98.039246%,98.039246%,98.039246%);stop-opacity:1;"
+         id="stop2016" />
+      <stop
+         offset="0.03125"
+         style="stop-color:rgb(97.647095%,97.647095%,97.647095%);stop-opacity:1;"
+         id="stop2018" />
+      <stop
+         offset="0.0351563"
+         style="stop-color:rgb(97.647095%,97.647095%,97.647095%);stop-opacity:1;"
+         id="stop2020" />
+      <stop
+         offset="0.0390625"
+         style="stop-color:rgb(97.647095%,97.647095%,97.647095%);stop-opacity:1;"
+         id="stop2022" />
+      <stop
+         offset="0.0429688"
+         style="stop-color:rgb(97.254944%,97.254944%,97.254944%);stop-opacity:1;"
+         id="stop2024" />
+      <stop
+         offset="0.046875"
+         style="stop-color:rgb(96.862793%,96.862793%,96.862793%);stop-opacity:1;"
+         id="stop2026" />
+      <stop
+         offset="0.0507813"
+         style="stop-color:rgb(96.470642%,96.470642%,96.470642%);stop-opacity:1;"
+         id="stop2028" />
+      <stop
+         offset="0.0546875"
+         style="stop-color:rgb(96.078491%,96.078491%,96.078491%);stop-opacity:1;"
+         id="stop2030" />
+      <stop
+         offset="0.0585938"
+         style="stop-color:rgb(96.078491%,96.078491%,96.078491%);stop-opacity:1;"
+         id="stop2032" />
+      <stop
+         offset="0.0625"
+         style="stop-color:rgb(96.078491%,95.68634%,95.68634%);stop-opacity:1;"
+         id="stop2034" />
+      <stop
+         offset="0.0664063"
+         style="stop-color:rgb(95.68634%,95.294189%,95.294189%);stop-opacity:1;"
+         id="stop2036" />
+      <stop
+         offset="0.0703125"
+         style="stop-color:rgb(95.294189%,95.294189%,95.294189%);stop-opacity:1;"
+         id="stop2038" />
+      <stop
+         offset="0.0742188"
+         style="stop-color:rgb(94.902039%,94.902039%,94.902039%);stop-opacity:1;"
+         id="stop2040" />
+      <stop
+         offset="0.078125"
+         style="stop-color:rgb(94.509888%,94.509888%,94.509888%);stop-opacity:1;"
+         id="stop2042" />
+      <stop
+         offset="0.0820313"
+         style="stop-color:rgb(94.509888%,94.509888%,94.509888%);stop-opacity:1;"
+         id="stop2044" />
+      <stop
+         offset="0.0859375"
+         style="stop-color:rgb(94.117737%,94.117737%,94.117737%);stop-opacity:1;"
+         id="stop2046" />
+      <stop
+         offset="0.0898438"
+         style="stop-color:rgb(93.725586%,93.725586%,93.725586%);stop-opacity:1;"
+         id="stop2048" />
+      <stop
+         offset="0.09375"
+         style="stop-color:rgb(93.725586%,93.725586%,93.725586%);stop-opacity:1;"
+         id="stop2050" />
+      <stop
+         offset="0.0976563"
+         style="stop-color:rgb(93.333435%,93.333435%,93.333435%);stop-opacity:1;"
+         id="stop2052" />
+      <stop
+         offset="0.101563"
+         style="stop-color:rgb(92.941284%,92.941284%,92.941284%);stop-opacity:1;"
+         id="stop2054" />
+      <stop
+         offset="0.105469"
+         style="stop-color:rgb(92.941284%,92.941284%,92.941284%);stop-opacity:1;"
+         id="stop2056" />
+      <stop
+         offset="0.109375"
+         style="stop-color:rgb(92.549133%,92.549133%,92.549133%);stop-opacity:1;"
+         id="stop2058" />
+      <stop
+         offset="0.113281"
+         style="stop-color:rgb(92.156982%,92.156982%,92.156982%);stop-opacity:1;"
+         id="stop2060" />
+      <stop
+         offset="0.117188"
+         style="stop-color:rgb(92.156982%,92.156982%,92.156982%);stop-opacity:1;"
+         id="stop2062" />
+      <stop
+         offset="0.121094"
+         style="stop-color:rgb(91.764832%,91.764832%,91.764832%);stop-opacity:1;"
+         id="stop2064" />
+      <stop
+         offset="0.125"
+         style="stop-color:rgb(91.372681%,91.372681%,91.372681%);stop-opacity:1;"
+         id="stop2066" />
+      <stop
+         offset="0.128906"
+         style="stop-color:rgb(91.372681%,91.372681%,91.372681%);stop-opacity:1;"
+         id="stop2068" />
+      <stop
+         offset="0.132813"
+         style="stop-color:rgb(90.98053%,90.98053%,90.98053%);stop-opacity:1;"
+         id="stop2070" />
+      <stop
+         offset="0.136719"
+         style="stop-color:rgb(90.588379%,90.588379%,90.588379%);stop-opacity:1;"
+         id="stop2072" />
+      <stop
+         offset="0.140625"
+         style="stop-color:rgb(90.588379%,90.588379%,90.588379%);stop-opacity:1;"
+         id="stop2074" />
+      <stop
+         offset="0.144531"
+         style="stop-color:rgb(90.196228%,90.196228%,90.196228%);stop-opacity:1;"
+         id="stop2076" />
+      <stop
+         offset="0.148438"
+         style="stop-color:rgb(89.804077%,89.804077%,89.804077%);stop-opacity:1;"
+         id="stop2078" />
+      <stop
+         offset="0.152344"
+         style="stop-color:rgb(89.411926%,89.411926%,89.411926%);stop-opacity:1;"
+         id="stop2080" />
+      <stop
+         offset="0.15625"
+         style="stop-color:rgb(89.411926%,89.411926%,89.411926%);stop-opacity:1;"
+         id="stop2082" />
+      <stop
+         offset="0.160156"
+         style="stop-color:rgb(89.019775%,89.019775%,89.019775%);stop-opacity:1;"
+         id="stop2084" />
+      <stop
+         offset="0.164063"
+         style="stop-color:rgb(88.627625%,88.627625%,88.627625%);stop-opacity:1;"
+         id="stop2086" />
+      <stop
+         offset="0.167969"
+         style="stop-color:rgb(88.627625%,88.627625%,88.627625%);stop-opacity:1;"
+         id="stop2088" />
+      <stop
+         offset="0.171875"
+         style="stop-color:rgb(88.235474%,88.235474%,88.235474%);stop-opacity:1;"
+         id="stop2090" />
+      <stop
+         offset="0.175781"
+         style="stop-color:rgb(87.843323%,87.843323%,87.843323%);stop-opacity:1;"
+         id="stop2092" />
+      <stop
+         offset="0.179688"
+         style="stop-color:rgb(87.843323%,87.451172%,87.843323%);stop-opacity:1;"
+         id="stop2094" />
+      <stop
+         offset="0.183594"
+         style="stop-color:rgb(87.451172%,87.451172%,87.451172%);stop-opacity:1;"
+         id="stop2096" />
+      <stop
+         offset="0.1875"
+         style="stop-color:rgb(87.059021%,87.059021%,87.059021%);stop-opacity:1;"
+         id="stop2098" />
+      <stop
+         offset="0.191406"
+         style="stop-color:rgb(87.059021%,86.66687%,87.059021%);stop-opacity:1;"
+         id="stop2100" />
+      <stop
+         offset="0.195313"
+         style="stop-color:rgb(86.66687%,86.66687%,86.66687%);stop-opacity:1;"
+         id="stop2102" />
+      <stop
+         offset="0.199219"
+         style="stop-color:rgb(86.274719%,86.274719%,86.274719%);stop-opacity:1;"
+         id="stop2104" />
+      <stop
+         offset="0.203125"
+         style="stop-color:rgb(85.882568%,85.882568%,85.882568%);stop-opacity:1;"
+         id="stop2106" />
+      <stop
+         offset="0.207031"
+         style="stop-color:rgb(85.882568%,85.882568%,85.882568%);stop-opacity:1;"
+         id="stop2108" />
+      <stop
+         offset="0.210938"
+         style="stop-color:rgb(85.490417%,85.490417%,85.490417%);stop-opacity:1;"
+         id="stop2110" />
+      <stop
+         offset="0.214844"
+         style="stop-color:rgb(85.098267%,85.098267%,85.098267%);stop-opacity:1;"
+         id="stop2112" />
+      <stop
+         offset="0.21875"
+         style="stop-color:rgb(85.098267%,85.098267%,85.098267%);stop-opacity:1;"
+         id="stop2114" />
+      <stop
+         offset="0.222656"
+         style="stop-color:rgb(84.706116%,84.706116%,84.706116%);stop-opacity:1;"
+         id="stop2116" />
+      <stop
+         offset="0.226563"
+         style="stop-color:rgb(84.313965%,84.313965%,84.313965%);stop-opacity:1;"
+         id="stop2118" />
+      <stop
+         offset="0.230469"
+         style="stop-color:rgb(83.921814%,83.921814%,83.921814%);stop-opacity:1;"
+         id="stop2120" />
+      <stop
+         offset="0.234375"
+         style="stop-color:rgb(83.921814%,83.921814%,83.921814%);stop-opacity:1;"
+         id="stop2122" />
+      <stop
+         offset="0.238281"
+         style="stop-color:rgb(83.529663%,83.529663%,83.529663%);stop-opacity:1;"
+         id="stop2124" />
+      <stop
+         offset="0.242188"
+         style="stop-color:rgb(83.529663%,83.529663%,83.529663%);stop-opacity:1;"
+         id="stop2126" />
+      <stop
+         offset="0.246094"
+         style="stop-color:rgb(83.137512%,83.137512%,83.137512%);stop-opacity:1;"
+         id="stop2128" />
+      <stop
+         offset="0.25"
+         style="stop-color:rgb(82.745361%,82.745361%,82.745361%);stop-opacity:1;"
+         id="stop2130" />
+      <stop
+         offset="0.253906"
+         style="stop-color:rgb(82.35321%,82.35321%,82.35321%);stop-opacity:1;"
+         id="stop2132" />
+      <stop
+         offset="0.257813"
+         style="stop-color:rgb(81.96106%,81.96106%,81.96106%);stop-opacity:1;"
+         id="stop2134" />
+      <stop
+         offset="0.261719"
+         style="stop-color:rgb(81.96106%,81.568909%,81.96106%);stop-opacity:1;"
+         id="stop2136" />
+      <stop
+         offset="0.265625"
+         style="stop-color:rgb(81.96106%,81.568909%,81.96106%);stop-opacity:1;"
+         id="stop2138" />
+      <stop
+         offset="0.269531"
+         style="stop-color:rgb(81.568909%,81.568909%,81.568909%);stop-opacity:1;"
+         id="stop2140" />
+      <stop
+         offset="0.273438"
+         style="stop-color:rgb(81.176758%,81.176758%,81.176758%);stop-opacity:1;"
+         id="stop2142" />
+      <stop
+         offset="0.277344"
+         style="stop-color:rgb(80.784607%,80.784607%,80.784607%);stop-opacity:1;"
+         id="stop2144" />
+      <stop
+         offset="0.28125"
+         style="stop-color:rgb(80.392456%,80.392456%,80.392456%);stop-opacity:1;"
+         id="stop2146" />
+      <stop
+         offset="0.285156"
+         style="stop-color:rgb(80.000305%,80.000305%,80.000305%);stop-opacity:1;"
+         id="stop2148" />
+      <stop
+         offset="0.289063"
+         style="stop-color:rgb(79.608154%,79.608154%,79.608154%);stop-opacity:1;"
+         id="stop2150" />
+      <stop
+         offset="0.292969"
+         style="stop-color:rgb(79.608154%,79.608154%,79.608154%);stop-opacity:1;"
+         id="stop2152" />
+      <stop
+         offset="0.296875"
+         style="stop-color:rgb(79.608154%,79.608154%,79.608154%);stop-opacity:1;"
+         id="stop2154" />
+      <stop
+         offset="0.300781"
+         style="stop-color:rgb(79.216003%,79.216003%,79.216003%);stop-opacity:1;"
+         id="stop2156" />
+      <stop
+         offset="0.304688"
+         style="stop-color:rgb(78.823853%,78.823853%,78.823853%);stop-opacity:1;"
+         id="stop2158" />
+      <stop
+         offset="0.308594"
+         style="stop-color:rgb(78.431702%,78.431702%,78.431702%);stop-opacity:1;"
+         id="stop2160" />
+      <stop
+         offset="0.3125"
+         style="stop-color:rgb(78.039551%,78.039551%,78.039551%);stop-opacity:1;"
+         id="stop2162" />
+      <stop
+         offset="0.316406"
+         style="stop-color:rgb(77.6474%,77.6474%,77.6474%);stop-opacity:1;"
+         id="stop2164" />
+      <stop
+         offset="0.320313"
+         style="stop-color:rgb(77.6474%,77.6474%,77.6474%);stop-opacity:1;"
+         id="stop2166" />
+      <stop
+         offset="0.324219"
+         style="stop-color:rgb(77.255249%,77.255249%,77.255249%);stop-opacity:1;"
+         id="stop2168" />
+      <stop
+         offset="0.328125"
+         style="stop-color:rgb(77.255249%,77.255249%,77.255249%);stop-opacity:1;"
+         id="stop2170" />
+      <stop
+         offset="0.332031"
+         style="stop-color:rgb(76.863098%,76.863098%,76.863098%);stop-opacity:1;"
+         id="stop2172" />
+      <stop
+         offset="0.335938"
+         style="stop-color:rgb(76.470947%,76.470947%,76.470947%);stop-opacity:1;"
+         id="stop2174" />
+      <stop
+         offset="0.339844"
+         style="stop-color:rgb(76.078796%,76.078796%,76.078796%);stop-opacity:1;"
+         id="stop2176" />
+      <stop
+         offset="0.34375"
+         style="stop-color:rgb(76.078796%,76.078796%,76.078796%);stop-opacity:1;"
+         id="stop2178" />
+      <stop
+         offset="0.347656"
+         style="stop-color:rgb(75.686646%,75.686646%,75.686646%);stop-opacity:1;"
+         id="stop2180" />
+      <stop
+         offset="0.351563"
+         style="stop-color:rgb(75.294495%,75.294495%,75.294495%);stop-opacity:1;"
+         id="stop2182" />
+      <stop
+         offset="0.355469"
+         style="stop-color:rgb(74.902344%,74.902344%,74.902344%);stop-opacity:1;"
+         id="stop2184" />
+      <stop
+         offset="0.359375"
+         style="stop-color:rgb(74.902344%,74.902344%,74.902344%);stop-opacity:1;"
+         id="stop2186" />
+      <stop
+         offset="0.363281"
+         style="stop-color:rgb(74.510193%,74.510193%,74.510193%);stop-opacity:1;"
+         id="stop2188" />
+      <stop
+         offset="0.367188"
+         style="stop-color:rgb(74.118042%,74.118042%,74.118042%);stop-opacity:1;"
+         id="stop2190" />
+      <stop
+         offset="0.371094"
+         style="stop-color:rgb(74.118042%,74.118042%,74.118042%);stop-opacity:1;"
+         id="stop2192" />
+      <stop
+         offset="0.375"
+         style="stop-color:rgb(73.725891%,73.725891%,73.725891%);stop-opacity:1;"
+         id="stop2194" />
+      <stop
+         offset="0.378906"
+         style="stop-color:rgb(73.33374%,73.33374%,73.33374%);stop-opacity:1;"
+         id="stop2196" />
+      <stop
+         offset="0.382813"
+         style="stop-color:rgb(72.941589%,72.941589%,72.941589%);stop-opacity:1;"
+         id="stop2198" />
+      <stop
+         offset="0.386719"
+         style="stop-color:rgb(72.549438%,72.549438%,72.549438%);stop-opacity:1;"
+         id="stop2200" />
+      <stop
+         offset="0.390625"
+         style="stop-color:rgb(72.157288%,72.157288%,72.157288%);stop-opacity:1;"
+         id="stop2202" />
+      <stop
+         offset="0.394531"
+         style="stop-color:rgb(72.157288%,72.157288%,72.157288%);stop-opacity:1;"
+         id="stop2204" />
+      <stop
+         offset="0.398438"
+         style="stop-color:rgb(72.157288%,72.157288%,72.157288%);stop-opacity:1;"
+         id="stop2206" />
+      <stop
+         offset="0.402344"
+         style="stop-color:rgb(71.765137%,71.765137%,71.765137%);stop-opacity:1;"
+         id="stop2208" />
+      <stop
+         offset="0.40625"
+         style="stop-color:rgb(71.372986%,71.372986%,71.372986%);stop-opacity:1;"
+         id="stop2210" />
+      <stop
+         offset="0.410156"
+         style="stop-color:rgb(70.980835%,70.980835%,70.980835%);stop-opacity:1;"
+         id="stop2212" />
+      <stop
+         offset="0.414063"
+         style="stop-color:rgb(70.588684%,70.588684%,70.588684%);stop-opacity:1;"
+         id="stop2214" />
+      <stop
+         offset="0.417969"
+         style="stop-color:rgb(70.196533%,70.196533%,70.196533%);stop-opacity:1;"
+         id="stop2216" />
+      <stop
+         offset="0.421875"
+         style="stop-color:rgb(70.196533%,70.196533%,70.196533%);stop-opacity:1;"
+         id="stop2218" />
+      <stop
+         offset="0.425781"
+         style="stop-color:rgb(69.804382%,69.804382%,69.804382%);stop-opacity:1;"
+         id="stop2220" />
+      <stop
+         offset="0.429688"
+         style="stop-color:rgb(69.412231%,69.412231%,69.412231%);stop-opacity:1;"
+         id="stop2222" />
+      <stop
+         offset="0.433594"
+         style="stop-color:rgb(69.412231%,69.020081%,69.412231%);stop-opacity:1;"
+         id="stop2224" />
+      <stop
+         offset="0.4375"
+         style="stop-color:rgb(69.020081%,69.020081%,69.020081%);stop-opacity:1;"
+         id="stop2226" />
+      <stop
+         offset="0.441406"
+         style="stop-color:rgb(68.62793%,68.62793%,68.62793%);stop-opacity:1;"
+         id="stop2228" />
+      <stop
+         offset="0.445313"
+         style="stop-color:rgb(68.62793%,68.62793%,68.62793%);stop-opacity:1;"
+         id="stop2230" />
+      <stop
+         offset="0.449219"
+         style="stop-color:rgb(68.235779%,68.235779%,68.235779%);stop-opacity:1;"
+         id="stop2232" />
+      <stop
+         offset="0.453125"
+         style="stop-color:rgb(67.843628%,67.843628%,67.843628%);stop-opacity:1;"
+         id="stop2234" />
+      <stop
+         offset="0.457031"
+         style="stop-color:rgb(67.451477%,67.451477%,67.451477%);stop-opacity:1;"
+         id="stop2236" />
+      <stop
+         offset="0.460938"
+         style="stop-color:rgb(67.059326%,67.059326%,67.059326%);stop-opacity:1;"
+         id="stop2238" />
+      <stop
+         offset="0.464844"
+         style="stop-color:rgb(66.667175%,66.667175%,66.667175%);stop-opacity:1;"
+         id="stop2240" />
+      <stop
+         offset="0.46875"
+         style="stop-color:rgb(66.667175%,66.667175%,66.667175%);stop-opacity:1;"
+         id="stop2242" />
+      <stop
+         offset="0.472656"
+         style="stop-color:rgb(66.275024%,66.275024%,66.275024%);stop-opacity:1;"
+         id="stop2244" />
+      <stop
+         offset="0.476563"
+         style="stop-color:rgb(65.882874%,65.882874%,65.882874%);stop-opacity:1;"
+         id="stop2246" />
+      <stop
+         offset="0.480469"
+         style="stop-color:rgb(65.882874%,65.882874%,65.882874%);stop-opacity:1;"
+         id="stop2248" />
+      <stop
+         offset="0.484375"
+         style="stop-color:rgb(65.490723%,65.490723%,65.490723%);stop-opacity:1;"
+         id="stop2250" />
+      <stop
+         offset="0.488281"
+         style="stop-color:rgb(65.098572%,65.098572%,65.098572%);stop-opacity:1;"
+         id="stop2252" />
+      <stop
+         offset="0.492188"
+         style="stop-color:rgb(64.706421%,64.706421%,64.706421%);stop-opacity:1;"
+         id="stop2254" />
+      <stop
+         offset="0.496094"
+         style="stop-color:rgb(64.31427%,64.31427%,64.31427%);stop-opacity:1;"
+         id="stop2256" />
+      <stop
+         offset="0.5"
+         style="stop-color:rgb(64.31427%,64.31427%,64.31427%);stop-opacity:1;"
+         id="stop2258" />
+      <stop
+         offset="0.503906"
+         style="stop-color:rgb(63.922119%,63.922119%,63.922119%);stop-opacity:1;"
+         id="stop2260" />
+      <stop
+         offset="0.507813"
+         style="stop-color:rgb(63.529968%,63.529968%,63.529968%);stop-opacity:1;"
+         id="stop2262" />
+      <stop
+         offset="0.511719"
+         style="stop-color:rgb(63.137817%,63.137817%,63.137817%);stop-opacity:1;"
+         id="stop2264" />
+      <stop
+         offset="0.515625"
+         style="stop-color:rgb(62.745667%,62.745667%,62.745667%);stop-opacity:1;"
+         id="stop2266" />
+      <stop
+         offset="0.519531"
+         style="stop-color:rgb(62.353516%,62.353516%,62.353516%);stop-opacity:1;"
+         id="stop2268" />
+      <stop
+         offset="0.523438"
+         style="stop-color:rgb(62.353516%,62.353516%,62.353516%);stop-opacity:1;"
+         id="stop2270" />
+      <stop
+         offset="0.527344"
+         style="stop-color:rgb(61.961365%,61.961365%,61.961365%);stop-opacity:1;"
+         id="stop2272" />
+      <stop
+         offset="0.53125"
+         style="stop-color:rgb(61.961365%,61.961365%,61.961365%);stop-opacity:1;"
+         id="stop2274" />
+      <stop
+         offset="0.535156"
+         style="stop-color:rgb(61.569214%,61.569214%,61.569214%);stop-opacity:1;"
+         id="stop2276" />
+      <stop
+         offset="0.539063"
+         style="stop-color:rgb(61.177063%,61.177063%,61.177063%);stop-opacity:1;"
+         id="stop2278" />
+      <stop
+         offset="0.542969"
+         style="stop-color:rgb(60.784912%,60.784912%,60.784912%);stop-opacity:1;"
+         id="stop2280" />
+      <stop
+         offset="0.546875"
+         style="stop-color:rgb(60.784912%,60.784912%,60.784912%);stop-opacity:1;"
+         id="stop2282" />
+      <stop
+         offset="0.550781"
+         style="stop-color:rgb(60.392761%,60.392761%,60.392761%);stop-opacity:1;"
+         id="stop2284" />
+      <stop
+         offset="0.554688"
+         style="stop-color:rgb(60.00061%,60.00061%,60.00061%);stop-opacity:1;"
+         id="stop2286" />
+      <stop
+         offset="0.558594"
+         style="stop-color:rgb(59.608459%,59.608459%,59.608459%);stop-opacity:1;"
+         id="stop2288" />
+      <stop
+         offset="0.5625"
+         style="stop-color:rgb(59.216309%,59.216309%,59.216309%);stop-opacity:1;"
+         id="stop2290" />
+      <stop
+         offset="0.566406"
+         style="stop-color:rgb(58.824158%,58.824158%,58.824158%);stop-opacity:1;"
+         id="stop2292" />
+      <stop
+         offset="0.570313"
+         style="stop-color:rgb(58.432007%,58.432007%,58.432007%);stop-opacity:1;"
+         id="stop2294" />
+      <stop
+         offset="0.574219"
+         style="stop-color:rgb(58.432007%,58.432007%,58.432007%);stop-opacity:1;"
+         id="stop2296" />
+      <stop
+         offset="0.578125"
+         style="stop-color:rgb(58.039856%,58.039856%,58.039856%);stop-opacity:1;"
+         id="stop2298" />
+      <stop
+         offset="0.582031"
+         style="stop-color:rgb(57.647705%,57.647705%,57.647705%);stop-opacity:1;"
+         id="stop2300" />
+      <stop
+         offset="0.585938"
+         style="stop-color:rgb(57.255554%,57.255554%,57.255554%);stop-opacity:1;"
+         id="stop2302" />
+      <stop
+         offset="0.589844"
+         style="stop-color:rgb(56.863403%,56.863403%,56.863403%);stop-opacity:1;"
+         id="stop2304" />
+      <stop
+         offset="0.59375"
+         style="stop-color:rgb(56.863403%,56.471252%,56.863403%);stop-opacity:1;"
+         id="stop2306" />
+      <stop
+         offset="0.597656"
+         style="stop-color:rgb(56.863403%,56.471252%,56.863403%);stop-opacity:1;"
+         id="stop2308" />
+      <stop
+         offset="0.601563"
+         style="stop-color:rgb(56.471252%,56.471252%,56.471252%);stop-opacity:1;"
+         id="stop2310" />
+      <stop
+         offset="0.605469"
+         style="stop-color:rgb(56.079102%,56.079102%,56.079102%);stop-opacity:1;"
+         id="stop2312" />
+      <stop
+         offset="0.609375"
+         style="stop-color:rgb(55.686951%,55.686951%,55.686951%);stop-opacity:1;"
+         id="stop2314" />
+      <stop
+         offset="0.613281"
+         style="stop-color:rgb(55.2948%,55.2948%,55.2948%);stop-opacity:1;"
+         id="stop2316" />
+      <stop
+         offset="0.617188"
+         style="stop-color:rgb(54.902649%,54.902649%,54.902649%);stop-opacity:1;"
+         id="stop2318" />
+      <stop
+         offset="0.621094"
+         style="stop-color:rgb(54.510498%,54.510498%,54.510498%);stop-opacity:1;"
+         id="stop2320" />
+      <stop
+         offset="0.625"
+         style="stop-color:rgb(54.510498%,54.510498%,54.510498%);stop-opacity:1;"
+         id="stop2322" />
+      <stop
+         offset="0.628906"
+         style="stop-color:rgb(54.118347%,54.118347%,54.118347%);stop-opacity:1;"
+         id="stop2324" />
+      <stop
+         offset="0.632813"
+         style="stop-color:rgb(53.726196%,53.726196%,53.726196%);stop-opacity:1;"
+         id="stop2326" />
+      <stop
+         offset="0.636719"
+         style="stop-color:rgb(53.334045%,53.334045%,53.334045%);stop-opacity:1;"
+         id="stop2328" />
+      <stop
+         offset="0.640625"
+         style="stop-color:rgb(52.941895%,52.941895%,52.941895%);stop-opacity:1;"
+         id="stop2330" />
+      <stop
+         offset="0.644531"
+         style="stop-color:rgb(52.549744%,52.549744%,52.549744%);stop-opacity:1;"
+         id="stop2332" />
+      <stop
+         offset="0.648438"
+         style="stop-color:rgb(52.549744%,52.549744%,52.549744%);stop-opacity:1;"
+         id="stop2334" />
+      <stop
+         offset="0.652344"
+         style="stop-color:rgb(52.157593%,52.157593%,52.157593%);stop-opacity:1;"
+         id="stop2336" />
+      <stop
+         offset="0.65625"
+         style="stop-color:rgb(51.765442%,51.765442%,51.765442%);stop-opacity:1;"
+         id="stop2338" />
+      <stop
+         offset="0.660156"
+         style="stop-color:rgb(51.373291%,51.373291%,51.373291%);stop-opacity:1;"
+         id="stop2340" />
+      <stop
+         offset="0.664063"
+         style="stop-color:rgb(50.98114%,50.98114%,50.98114%);stop-opacity:1;"
+         id="stop2342" />
+      <stop
+         offset="0.667969"
+         style="stop-color:rgb(50.588989%,50.588989%,50.588989%);stop-opacity:1;"
+         id="stop2344" />
+      <stop
+         offset="0.671875"
+         style="stop-color:rgb(50.588989%,50.588989%,50.588989%);stop-opacity:1;"
+         id="stop2346" />
+      <stop
+         offset="0.675781"
+         style="stop-color:rgb(50.196838%,50.196838%,50.196838%);stop-opacity:1;"
+         id="stop2348" />
+      <stop
+         offset="0.679688"
+         style="stop-color:rgb(49.803162%,49.803162%,49.803162%);stop-opacity:1;"
+         id="stop2350" />
+      <stop
+         offset="0.683594"
+         style="stop-color:rgb(49.411011%,49.411011%,49.411011%);stop-opacity:1;"
+         id="stop2352" />
+      <stop
+         offset="0.6875"
+         style="stop-color:rgb(49.01886%,49.01886%,49.01886%);stop-opacity:1;"
+         id="stop2354" />
+      <stop
+         offset="0.691406"
+         style="stop-color:rgb(48.626709%,48.626709%,48.626709%);stop-opacity:1;"
+         id="stop2356" />
+      <stop
+         offset="0.695313"
+         style="stop-color:rgb(48.234558%,48.234558%,48.234558%);stop-opacity:1;"
+         id="stop2358" />
+      <stop
+         offset="0.699219"
+         style="stop-color:rgb(47.842407%,47.842407%,47.842407%);stop-opacity:1;"
+         id="stop2360" />
+      <stop
+         offset="0.703125"
+         style="stop-color:rgb(47.842407%,47.842407%,47.842407%);stop-opacity:1;"
+         id="stop2362" />
+      <stop
+         offset="0.707031"
+         style="stop-color:rgb(47.450256%,47.450256%,47.450256%);stop-opacity:1;"
+         id="stop2364" />
+      <stop
+         offset="0.710938"
+         style="stop-color:rgb(47.058105%,47.058105%,47.058105%);stop-opacity:1;"
+         id="stop2366" />
+      <stop
+         offset="0.714844"
+         style="stop-color:rgb(46.665955%,46.665955%,46.665955%);stop-opacity:1;"
+         id="stop2368" />
+      <stop
+         offset="0.71875"
+         style="stop-color:rgb(46.273804%,46.273804%,46.273804%);stop-opacity:1;"
+         id="stop2370" />
+      <stop
+         offset="0.722656"
+         style="stop-color:rgb(45.881653%,45.881653%,45.881653%);stop-opacity:1;"
+         id="stop2372" />
+      <stop
+         offset="0.726563"
+         style="stop-color:rgb(45.881653%,45.881653%,45.881653%);stop-opacity:1;"
+         id="stop2374" />
+      <stop
+         offset="0.730469"
+         style="stop-color:rgb(45.489502%,45.489502%,45.489502%);stop-opacity:1;"
+         id="stop2376" />
+      <stop
+         offset="0.734375"
+         style="stop-color:rgb(45.097351%,45.097351%,45.097351%);stop-opacity:1;"
+         id="stop2378" />
+      <stop
+         offset="0.738281"
+         style="stop-color:rgb(44.7052%,44.7052%,44.7052%);stop-opacity:1;"
+         id="stop2380" />
+      <stop
+         offset="0.742188"
+         style="stop-color:rgb(44.313049%,44.313049%,44.313049%);stop-opacity:1;"
+         id="stop2382" />
+      <stop
+         offset="0.746094"
+         style="stop-color:rgb(43.920898%,43.920898%,43.920898%);stop-opacity:1;"
+         id="stop2384" />
+      <stop
+         offset="0.75"
+         style="stop-color:rgb(43.920898%,43.920898%,43.920898%);stop-opacity:1;"
+         id="stop2386" />
+      <stop
+         offset="0.753906"
+         style="stop-color:rgb(43.528748%,43.528748%,43.528748%);stop-opacity:1;"
+         id="stop2388" />
+      <stop
+         offset="0.757813"
+         style="stop-color:rgb(43.136597%,43.136597%,43.136597%);stop-opacity:1;"
+         id="stop2390" />
+      <stop
+         offset="0.761719"
+         style="stop-color:rgb(42.744446%,42.744446%,42.744446%);stop-opacity:1;"
+         id="stop2392" />
+      <stop
+         offset="0.765625"
+         style="stop-color:rgb(42.352295%,42.352295%,42.352295%);stop-opacity:1;"
+         id="stop2394" />
+      <stop
+         offset="0.769531"
+         style="stop-color:rgb(41.960144%,41.960144%,41.960144%);stop-opacity:1;"
+         id="stop2396" />
+      <stop
+         offset="0.773438"
+         style="stop-color:rgb(41.567993%,41.567993%,41.567993%);stop-opacity:1;"
+         id="stop2398" />
+      <stop
+         offset="0.777344"
+         style="stop-color:rgb(41.567993%,41.567993%,41.567993%);stop-opacity:1;"
+         id="stop2400" />
+      <stop
+         offset="0.78125"
+         style="stop-color:rgb(41.175842%,41.175842%,41.175842%);stop-opacity:1;"
+         id="stop2402" />
+      <stop
+         offset="0.785156"
+         style="stop-color:rgb(40.783691%,40.783691%,40.783691%);stop-opacity:1;"
+         id="stop2404" />
+      <stop
+         offset="0.789063"
+         style="stop-color:rgb(40.391541%,40.391541%,40.391541%);stop-opacity:1;"
+         id="stop2406" />
+      <stop
+         offset="0.792969"
+         style="stop-color:rgb(39.99939%,39.99939%,39.99939%);stop-opacity:1;"
+         id="stop2408" />
+      <stop
+         offset="0.796875"
+         style="stop-color:rgb(39.607239%,39.607239%,39.607239%);stop-opacity:1;"
+         id="stop2410" />
+      <stop
+         offset="0.800781"
+         style="stop-color:rgb(39.607239%,39.607239%,39.607239%);stop-opacity:1;"
+         id="stop2412" />
+      <stop
+         offset="0.804688"
+         style="stop-color:rgb(39.215088%,39.215088%,39.215088%);stop-opacity:1;"
+         id="stop2414" />
+      <stop
+         offset="0.808594"
+         style="stop-color:rgb(38.822937%,38.822937%,38.822937%);stop-opacity:1;"
+         id="stop2416" />
+      <stop
+         offset="0.8125"
+         style="stop-color:rgb(38.430786%,38.430786%,38.430786%);stop-opacity:1;"
+         id="stop2418" />
+      <stop
+         offset="0.816406"
+         style="stop-color:rgb(38.038635%,38.038635%,38.038635%);stop-opacity:1;"
+         id="stop2420" />
+      <stop
+         offset="0.820313"
+         style="stop-color:rgb(37.646484%,37.646484%,37.646484%);stop-opacity:1;"
+         id="stop2422" />
+      <stop
+         offset="0.824219"
+         style="stop-color:rgb(36.862183%,36.862183%,36.862183%);stop-opacity:1;"
+         id="stop2424" />
+      <stop
+         offset="0.828125"
+         style="stop-color:rgb(36.862183%,36.862183%,36.862183%);stop-opacity:1;"
+         id="stop2426" />
+      <stop
+         offset="0.832031"
+         style="stop-color:rgb(36.470032%,36.470032%,36.470032%);stop-opacity:1;"
+         id="stop2428" />
+      <stop
+         offset="0.835938"
+         style="stop-color:rgb(36.077881%,36.077881%,36.077881%);stop-opacity:1;"
+         id="stop2430" />
+      <stop
+         offset="0.839844"
+         style="stop-color:rgb(35.68573%,35.68573%,35.68573%);stop-opacity:1;"
+         id="stop2432" />
+      <stop
+         offset="0.84375"
+         style="stop-color:rgb(35.293579%,35.293579%,35.293579%);stop-opacity:1;"
+         id="stop2434" />
+      <stop
+         offset="0.847656"
+         style="stop-color:rgb(34.901428%,34.901428%,34.901428%);stop-opacity:1;"
+         id="stop2436" />
+      <stop
+         offset="0.851563"
+         style="stop-color:rgb(34.509277%,34.509277%,34.509277%);stop-opacity:1;"
+         id="stop2438" />
+      <stop
+         offset="0.855469"
+         style="stop-color:rgb(34.509277%,34.509277%,34.509277%);stop-opacity:1;"
+         id="stop2440" />
+      <stop
+         offset="0.859375"
+         style="stop-color:rgb(34.117126%,34.117126%,34.117126%);stop-opacity:1;"
+         id="stop2442" />
+      <stop
+         offset="0.863281"
+         style="stop-color:rgb(33.724976%,33.724976%,33.724976%);stop-opacity:1;"
+         id="stop2444" />
+      <stop
+         offset="0.867188"
+         style="stop-color:rgb(33.332825%,33.332825%,33.332825%);stop-opacity:1;"
+         id="stop2446" />
+      <stop
+         offset="0.871094"
+         style="stop-color:rgb(32.940674%,32.940674%,32.940674%);stop-opacity:1;"
+         id="stop2448" />
+      <stop
+         offset="0.875"
+         style="stop-color:rgb(32.156372%,32.156372%,32.156372%);stop-opacity:1;"
+         id="stop2450" />
+      <stop
+         offset="0.878906"
+         style="stop-color:rgb(32.156372%,32.156372%,32.156372%);stop-opacity:1;"
+         id="stop2452" />
+      <stop
+         offset="0.882813"
+         style="stop-color:rgb(31.764221%,31.764221%,31.764221%);stop-opacity:1;"
+         id="stop2454" />
+      <stop
+         offset="0.886719"
+         style="stop-color:rgb(31.37207%,31.37207%,31.37207%);stop-opacity:1;"
+         id="stop2456" />
+      <stop
+         offset="0.890625"
+         style="stop-color:rgb(30.979919%,30.979919%,30.979919%);stop-opacity:1;"
+         id="stop2458" />
+      <stop
+         offset="0.894531"
+         style="stop-color:rgb(30.587769%,30.587769%,30.587769%);stop-opacity:1;"
+         id="stop2460" />
+      <stop
+         offset="0.898438"
+         style="stop-color:rgb(30.195618%,30.195618%,30.195618%);stop-opacity:1;"
+         id="stop2462" />
+      <stop
+         offset="0.902344"
+         style="stop-color:rgb(29.803467%,29.803467%,29.803467%);stop-opacity:1;"
+         id="stop2464" />
+      <stop
+         offset="0.90625"
+         style="stop-color:rgb(29.803467%,29.803467%,29.803467%);stop-opacity:1;"
+         id="stop2466" />
+      <stop
+         offset="0.910156"
+         style="stop-color:rgb(29.411316%,29.411316%,29.411316%);stop-opacity:1;"
+         id="stop2468" />
+      <stop
+         offset="0.914063"
+         style="stop-color:rgb(28.627014%,28.627014%,28.627014%);stop-opacity:1;"
+         id="stop2470" />
+      <stop
+         offset="0.917969"
+         style="stop-color:rgb(28.234863%,28.234863%,28.234863%);stop-opacity:1;"
+         id="stop2472" />
+      <stop
+         offset="0.921875"
+         style="stop-color:rgb(27.842712%,27.842712%,27.842712%);stop-opacity:1;"
+         id="stop2474" />
+      <stop
+         offset="0.925781"
+         style="stop-color:rgb(27.450562%,27.450562%,27.450562%);stop-opacity:1;"
+         id="stop2476" />
+      <stop
+         offset="0.929688"
+         style="stop-color:rgb(27.450562%,27.450562%,27.450562%);stop-opacity:1;"
+         id="stop2478" />
+      <stop
+         offset="0.933594"
+         style="stop-color:rgb(27.058411%,27.058411%,27.058411%);stop-opacity:1;"
+         id="stop2480" />
+      <stop
+         offset="0.9375"
+         style="stop-color:rgb(26.66626%,26.66626%,26.66626%);stop-opacity:1;"
+         id="stop2482" />
+      <stop
+         offset="0.941406"
+         style="stop-color:rgb(25.881958%,25.881958%,25.881958%);stop-opacity:1;"
+         id="stop2484" />
+      <stop
+         offset="0.945313"
+         style="stop-color:rgb(25.489807%,25.489807%,25.489807%);stop-opacity:1;"
+         id="stop2486" />
+      <stop
+         offset="0.949219"
+         style="stop-color:rgb(25.097656%,25.097656%,25.097656%);stop-opacity:1;"
+         id="stop2488" />
+      <stop
+         offset="0.953125"
+         style="stop-color:rgb(25.097656%,25.097656%,25.097656%);stop-opacity:1;"
+         id="stop2490" />
+      <stop
+         offset="0.957031"
+         style="stop-color:rgb(24.705505%,24.705505%,24.705505%);stop-opacity:1;"
+         id="stop2492" />
+      <stop
+         offset="0.960938"
+         style="stop-color:rgb(24.313354%,24.313354%,24.313354%);stop-opacity:1;"
+         id="stop2494" />
+      <stop
+         offset="0.964844"
+         style="stop-color:rgb(23.529053%,23.529053%,23.529053%);stop-opacity:1;"
+         id="stop2496" />
+      <stop
+         offset="0.96875"
+         style="stop-color:rgb(23.136902%,23.136902%,23.136902%);stop-opacity:1;"
+         id="stop2498" />
+      <stop
+         offset="0.972656"
+         style="stop-color:rgb(22.744751%,22.744751%,22.744751%);stop-opacity:1;"
+         id="stop2500" />
+      <stop
+         offset="0.976563"
+         style="stop-color:rgb(22.3526%,22.3526%,22.3526%);stop-opacity:1;"
+         id="stop2502" />
+      <stop
+         offset="0.980469"
+         style="stop-color:rgb(21.568298%,21.568298%,21.568298%);stop-opacity:1;"
+         id="stop2504" />
+      <stop
+         offset="0.984375"
+         style="stop-color:rgb(21.568298%,21.568298%,21.568298%);stop-opacity:1;"
+         id="stop2506" />
+      <stop
+         offset="0.988281"
+         style="stop-color:rgb(21.176147%,21.176147%,21.176147%);stop-opacity:1;"
+         id="stop2508" />
+      <stop
+         offset="0.992188"
+         style="stop-color:rgb(20.783997%,20.783997%,20.783997%);stop-opacity:1;"
+         id="stop2510" />
+      <stop
+         offset="0.996094"
+         style="stop-color:rgb(20.391846%,20.391846%,20.391846%);stop-opacity:1;"
+         id="stop2512" />
+      <stop
+         offset="1"
+         style="stop-color:rgb(19.607544%,19.607544%,19.607544%);stop-opacity:1;"
+         id="stop2514" />
+    </linearGradient>
+    <clipPath
+       id="clip6-6">
+      <path
+         d="m 291.69922,182.35937 h 56.71484 v 61.56641 h -56.71484 z m 0,0"
+         id="path2517-9" />
+    </clipPath>
+    <linearGradient
+       id="linear1"
+       gradientUnits="userSpaceOnUse"
+       x1="-60.25"
+       y1="0"
+       x2="60.25"
+       y2="0"
+       gradientTransform="matrix(0,0.51093,-0.51093,0,320.05651,213.14183)">
+      <stop
+         offset="0"
+         style="stop-color:rgb(100%,100%,100%);stop-opacity:1;"
+         id="stop2520" />
+      <stop
+         offset="0.00390625"
+         style="stop-color:rgb(99.607849%,99.607849%,99.607849%);stop-opacity:1;"
+         id="stop2522" />
+      <stop
+         offset="0.0078125"
+         style="stop-color:rgb(99.215698%,99.215698%,99.215698%);stop-opacity:1;"
+         id="stop2524" />
+      <stop
+         offset="0.0117188"
+         style="stop-color:rgb(99.215698%,99.215698%,99.215698%);stop-opacity:1;"
+         id="stop2526" />
+      <stop
+         offset="0.015625"
+         style="stop-color:rgb(99.215698%,99.215698%,99.215698%);stop-opacity:1;"
+         id="stop2528" />
+      <stop
+         offset="0.0195313"
+         style="stop-color:rgb(98.823547%,98.823547%,98.823547%);stop-opacity:1;"
+         id="stop2530" />
+      <stop
+         offset="0.0234375"
+         style="stop-color:rgb(98.431396%,98.431396%,98.431396%);stop-opacity:1;"
+         id="stop2532" />
+      <stop
+         offset="0.0273438"
+         style="stop-color:rgb(98.039246%,98.039246%,98.039246%);stop-opacity:1;"
+         id="stop2534" />
+      <stop
+         offset="0.03125"
+         style="stop-color:rgb(97.647095%,97.647095%,97.647095%);stop-opacity:1;"
+         id="stop2536" />
+      <stop
+         offset="0.0351563"
+         style="stop-color:rgb(97.647095%,97.647095%,97.647095%);stop-opacity:1;"
+         id="stop2538" />
+      <stop
+         offset="0.0390625"
+         style="stop-color:rgb(97.647095%,97.647095%,97.647095%);stop-opacity:1;"
+         id="stop2540" />
+      <stop
+         offset="0.0429688"
+         style="stop-color:rgb(97.254944%,97.254944%,97.254944%);stop-opacity:1;"
+         id="stop2542" />
+      <stop
+         offset="0.046875"
+         style="stop-color:rgb(96.862793%,96.862793%,96.862793%);stop-opacity:1;"
+         id="stop2544" />
+      <stop
+         offset="0.0507813"
+         style="stop-color:rgb(96.470642%,96.470642%,96.470642%);stop-opacity:1;"
+         id="stop2546" />
+      <stop
+         offset="0.0546875"
+         style="stop-color:rgb(96.078491%,96.078491%,96.078491%);stop-opacity:1;"
+         id="stop2548" />
+      <stop
+         offset="0.0585938"
+         style="stop-color:rgb(96.078491%,96.078491%,96.078491%);stop-opacity:1;"
+         id="stop2550" />
+      <stop
+         offset="0.0625"
+         style="stop-color:rgb(96.078491%,95.68634%,95.68634%);stop-opacity:1;"
+         id="stop2552" />
+      <stop
+         offset="0.0664063"
+         style="stop-color:rgb(95.68634%,95.294189%,95.294189%);stop-opacity:1;"
+         id="stop2554" />
+      <stop
+         offset="0.0703125"
+         style="stop-color:rgb(95.294189%,95.294189%,95.294189%);stop-opacity:1;"
+         id="stop2556" />
+      <stop
+         offset="0.0742188"
+         style="stop-color:rgb(94.902039%,94.902039%,94.902039%);stop-opacity:1;"
+         id="stop2558" />
+      <stop
+         offset="0.078125"
+         style="stop-color:rgb(94.509888%,94.509888%,94.509888%);stop-opacity:1;"
+         id="stop2560" />
+      <stop
+         offset="0.0820313"
+         style="stop-color:rgb(94.509888%,94.509888%,94.509888%);stop-opacity:1;"
+         id="stop2562" />
+      <stop
+         offset="0.0859375"
+         style="stop-color:rgb(94.117737%,94.117737%,94.117737%);stop-opacity:1;"
+         id="stop2564" />
+      <stop
+         offset="0.0898438"
+         style="stop-color:rgb(93.725586%,93.725586%,93.725586%);stop-opacity:1;"
+         id="stop2566" />
+      <stop
+         offset="0.09375"
+         style="stop-color:rgb(93.725586%,93.725586%,93.725586%);stop-opacity:1;"
+         id="stop2568" />
+      <stop
+         offset="0.0976563"
+         style="stop-color:rgb(93.333435%,93.333435%,93.333435%);stop-opacity:1;"
+         id="stop2570" />
+      <stop
+         offset="0.101563"
+         style="stop-color:rgb(92.941284%,92.941284%,92.941284%);stop-opacity:1;"
+         id="stop2572" />
+      <stop
+         offset="0.105469"
+         style="stop-color:rgb(92.941284%,92.941284%,92.941284%);stop-opacity:1;"
+         id="stop2574" />
+      <stop
+         offset="0.109375"
+         style="stop-color:rgb(92.549133%,92.549133%,92.549133%);stop-opacity:1;"
+         id="stop2576" />
+      <stop
+         offset="0.113281"
+         style="stop-color:rgb(92.156982%,92.156982%,92.156982%);stop-opacity:1;"
+         id="stop2578" />
+      <stop
+         offset="0.117188"
+         style="stop-color:rgb(92.156982%,92.156982%,92.156982%);stop-opacity:1;"
+         id="stop2580" />
+      <stop
+         offset="0.121094"
+         style="stop-color:rgb(91.764832%,91.764832%,91.764832%);stop-opacity:1;"
+         id="stop2582" />
+      <stop
+         offset="0.125"
+         style="stop-color:rgb(91.372681%,91.372681%,91.372681%);stop-opacity:1;"
+         id="stop2584" />
+      <stop
+         offset="0.128906"
+         style="stop-color:rgb(91.372681%,91.372681%,91.372681%);stop-opacity:1;"
+         id="stop2586" />
+      <stop
+         offset="0.132813"
+         style="stop-color:rgb(90.98053%,90.98053%,90.98053%);stop-opacity:1;"
+         id="stop2588" />
+      <stop
+         offset="0.136719"
+         style="stop-color:rgb(90.588379%,90.588379%,90.588379%);stop-opacity:1;"
+         id="stop2590" />
+      <stop
+         offset="0.140625"
+         style="stop-color:rgb(90.588379%,90.588379%,90.588379%);stop-opacity:1;"
+         id="stop2592" />
+      <stop
+         offset="0.144531"
+         style="stop-color:rgb(90.196228%,90.196228%,90.196228%);stop-opacity:1;"
+         id="stop2594" />
+      <stop
+         offset="0.148438"
+         style="stop-color:rgb(89.804077%,89.804077%,89.804077%);stop-opacity:1;"
+         id="stop2596" />
+      <stop
+         offset="0.152344"
+         style="stop-color:rgb(89.411926%,89.411926%,89.411926%);stop-opacity:1;"
+         id="stop2598" />
+      <stop
+         offset="0.15625"
+         style="stop-color:rgb(89.411926%,89.411926%,89.411926%);stop-opacity:1;"
+         id="stop2600" />
+      <stop
+         offset="0.160156"
+         style="stop-color:rgb(89.019775%,89.019775%,89.019775%);stop-opacity:1;"
+         id="stop2602" />
+      <stop
+         offset="0.164063"
+         style="stop-color:rgb(88.627625%,88.627625%,88.627625%);stop-opacity:1;"
+         id="stop2604" />
+      <stop
+         offset="0.167969"
+         style="stop-color:rgb(88.627625%,88.627625%,88.627625%);stop-opacity:1;"
+         id="stop2606" />
+      <stop
+         offset="0.171875"
+         style="stop-color:rgb(88.235474%,88.235474%,88.235474%);stop-opacity:1;"
+         id="stop2608" />
+      <stop
+         offset="0.175781"
+         style="stop-color:rgb(87.843323%,87.843323%,87.843323%);stop-opacity:1;"
+         id="stop2610" />
+      <stop
+         offset="0.179688"
+         style="stop-color:rgb(87.843323%,87.451172%,87.843323%);stop-opacity:1;"
+         id="stop2612" />
+      <stop
+         offset="0.183594"
+         style="stop-color:rgb(87.451172%,87.451172%,87.451172%);stop-opacity:1;"
+         id="stop2614" />
+      <stop
+         offset="0.1875"
+         style="stop-color:rgb(87.059021%,87.059021%,87.059021%);stop-opacity:1;"
+         id="stop2616" />
+      <stop
+         offset="0.191406"
+         style="stop-color:rgb(87.059021%,86.66687%,87.059021%);stop-opacity:1;"
+         id="stop2618" />
+      <stop
+         offset="0.195313"
+         style="stop-color:rgb(86.66687%,86.66687%,86.66687%);stop-opacity:1;"
+         id="stop2620" />
+      <stop
+         offset="0.199219"
+         style="stop-color:rgb(86.274719%,86.274719%,86.274719%);stop-opacity:1;"
+         id="stop2622" />
+      <stop
+         offset="0.203125"
+         style="stop-color:rgb(85.882568%,85.882568%,85.882568%);stop-opacity:1;"
+         id="stop2624" />
+      <stop
+         offset="0.207031"
+         style="stop-color:rgb(85.882568%,85.882568%,85.882568%);stop-opacity:1;"
+         id="stop2626" />
+      <stop
+         offset="0.210938"
+         style="stop-color:rgb(85.490417%,85.490417%,85.490417%);stop-opacity:1;"
+         id="stop2628" />
+      <stop
+         offset="0.214844"
+         style="stop-color:rgb(85.098267%,85.098267%,85.098267%);stop-opacity:1;"
+         id="stop2630" />
+      <stop
+         offset="0.21875"
+         style="stop-color:rgb(85.098267%,85.098267%,85.098267%);stop-opacity:1;"
+         id="stop2632" />
+      <stop
+         offset="0.222656"
+         style="stop-color:rgb(84.706116%,84.706116%,84.706116%);stop-opacity:1;"
+         id="stop2634" />
+      <stop
+         offset="0.226563"
+         style="stop-color:rgb(84.313965%,84.313965%,84.313965%);stop-opacity:1;"
+         id="stop2636" />
+      <stop
+         offset="0.230469"
+         style="stop-color:rgb(83.921814%,83.921814%,83.921814%);stop-opacity:1;"
+         id="stop2638" />
+      <stop
+         offset="0.234375"
+         style="stop-color:rgb(83.921814%,83.921814%,83.921814%);stop-opacity:1;"
+         id="stop2640" />
+      <stop
+         offset="0.238281"
+         style="stop-color:rgb(83.529663%,83.529663%,83.529663%);stop-opacity:1;"
+         id="stop2642" />
+      <stop
+         offset="0.242188"
+         style="stop-color:rgb(83.529663%,83.529663%,83.529663%);stop-opacity:1;"
+         id="stop2644" />
+      <stop
+         offset="0.246094"
+         style="stop-color:rgb(83.137512%,83.137512%,83.137512%);stop-opacity:1;"
+         id="stop2646" />
+      <stop
+         offset="0.25"
+         style="stop-color:rgb(82.745361%,82.745361%,82.745361%);stop-opacity:1;"
+         id="stop2648" />
+      <stop
+         offset="0.253906"
+         style="stop-color:rgb(82.35321%,82.35321%,82.35321%);stop-opacity:1;"
+         id="stop2650" />
+      <stop
+         offset="0.257813"
+         style="stop-color:rgb(81.96106%,81.96106%,81.96106%);stop-opacity:1;"
+         id="stop2652" />
+      <stop
+         offset="0.261719"
+         style="stop-color:rgb(81.96106%,81.568909%,81.96106%);stop-opacity:1;"
+         id="stop2654" />
+      <stop
+         offset="0.265625"
+         style="stop-color:rgb(81.96106%,81.568909%,81.96106%);stop-opacity:1;"
+         id="stop2656" />
+      <stop
+         offset="0.269531"
+         style="stop-color:rgb(81.568909%,81.568909%,81.568909%);stop-opacity:1;"
+         id="stop2658" />
+      <stop
+         offset="0.273438"
+         style="stop-color:rgb(81.176758%,81.176758%,81.176758%);stop-opacity:1;"
+         id="stop2660" />
+      <stop
+         offset="0.277344"
+         style="stop-color:rgb(80.784607%,80.784607%,80.784607%);stop-opacity:1;"
+         id="stop2662" />
+      <stop
+         offset="0.28125"
+         style="stop-color:rgb(80.392456%,80.392456%,80.392456%);stop-opacity:1;"
+         id="stop2664" />
+      <stop
+         offset="0.285156"
+         style="stop-color:rgb(80.000305%,80.000305%,80.000305%);stop-opacity:1;"
+         id="stop2666" />
+      <stop
+         offset="0.289063"
+         style="stop-color:rgb(79.608154%,79.608154%,79.608154%);stop-opacity:1;"
+         id="stop2668" />
+      <stop
+         offset="0.292969"
+         style="stop-color:rgb(79.608154%,79.608154%,79.608154%);stop-opacity:1;"
+         id="stop2670" />
+      <stop
+         offset="0.296875"
+         style="stop-color:rgb(79.608154%,79.608154%,79.608154%);stop-opacity:1;"
+         id="stop2672" />
+      <stop
+         offset="0.300781"
+         style="stop-color:rgb(79.216003%,79.216003%,79.216003%);stop-opacity:1;"
+         id="stop2674" />
+      <stop
+         offset="0.304688"
+         style="stop-color:rgb(78.823853%,78.823853%,78.823853%);stop-opacity:1;"
+         id="stop2676" />
+      <stop
+         offset="0.308594"
+         style="stop-color:rgb(78.431702%,78.431702%,78.431702%);stop-opacity:1;"
+         id="stop2678" />
+      <stop
+         offset="0.3125"
+         style="stop-color:rgb(78.039551%,78.039551%,78.039551%);stop-opacity:1;"
+         id="stop2680" />
+      <stop
+         offset="0.316406"
+         style="stop-color:rgb(77.6474%,77.6474%,77.6474%);stop-opacity:1;"
+         id="stop2682" />
+      <stop
+         offset="0.320313"
+         style="stop-color:rgb(77.6474%,77.6474%,77.6474%);stop-opacity:1;"
+         id="stop2684" />
+      <stop
+         offset="0.324219"
+         style="stop-color:rgb(77.255249%,77.255249%,77.255249%);stop-opacity:1;"
+         id="stop2686" />
+      <stop
+         offset="0.328125"
+         style="stop-color:rgb(77.255249%,77.255249%,77.255249%);stop-opacity:1;"
+         id="stop2688" />
+      <stop
+         offset="0.332031"
+         style="stop-color:rgb(76.863098%,76.863098%,76.863098%);stop-opacity:1;"
+         id="stop2690" />
+      <stop
+         offset="0.335938"
+         style="stop-color:rgb(76.470947%,76.470947%,76.470947%);stop-opacity:1;"
+         id="stop2692" />
+      <stop
+         offset="0.339844"
+         style="stop-color:rgb(76.078796%,76.078796%,76.078796%);stop-opacity:1;"
+         id="stop2694" />
+      <stop
+         offset="0.34375"
+         style="stop-color:rgb(76.078796%,76.078796%,76.078796%);stop-opacity:1;"
+         id="stop2696" />
+      <stop
+         offset="0.347656"
+         style="stop-color:rgb(75.686646%,75.686646%,75.686646%);stop-opacity:1;"
+         id="stop2698" />
+      <stop
+         offset="0.351563"
+         style="stop-color:rgb(75.294495%,75.294495%,75.294495%);stop-opacity:1;"
+         id="stop2700" />
+      <stop
+         offset="0.355469"
+         style="stop-color:rgb(74.902344%,74.902344%,74.902344%);stop-opacity:1;"
+         id="stop2702" />
+      <stop
+         offset="0.359375"
+         style="stop-color:rgb(74.902344%,74.902344%,74.902344%);stop-opacity:1;"
+         id="stop2704" />
+      <stop
+         offset="0.363281"
+         style="stop-color:rgb(74.510193%,74.510193%,74.510193%);stop-opacity:1;"
+         id="stop2706" />
+      <stop
+         offset="0.367188"
+         style="stop-color:rgb(74.118042%,74.118042%,74.118042%);stop-opacity:1;"
+         id="stop2708" />
+      <stop
+         offset="0.371094"
+         style="stop-color:rgb(74.118042%,74.118042%,74.118042%);stop-opacity:1;"
+         id="stop2710" />
+      <stop
+         offset="0.375"
+         style="stop-color:rgb(73.725891%,73.725891%,73.725891%);stop-opacity:1;"
+         id="stop2712" />
+      <stop
+         offset="0.378906"
+         style="stop-color:rgb(73.33374%,73.33374%,73.33374%);stop-opacity:1;"
+         id="stop2714" />
+      <stop
+         offset="0.382813"
+         style="stop-color:rgb(72.941589%,72.941589%,72.941589%);stop-opacity:1;"
+         id="stop2716" />
+      <stop
+         offset="0.386719"
+         style="stop-color:rgb(72.549438%,72.549438%,72.549438%);stop-opacity:1;"
+         id="stop2718" />
+      <stop
+         offset="0.390625"
+         style="stop-color:rgb(72.157288%,72.157288%,72.157288%);stop-opacity:1;"
+         id="stop2720" />
+      <stop
+         offset="0.394531"
+         style="stop-color:rgb(72.157288%,72.157288%,72.157288%);stop-opacity:1;"
+         id="stop2722" />
+      <stop
+         offset="0.398438"
+         style="stop-color:rgb(72.157288%,72.157288%,72.157288%);stop-opacity:1;"
+         id="stop2724" />
+      <stop
+         offset="0.402344"
+         style="stop-color:rgb(71.765137%,71.765137%,71.765137%);stop-opacity:1;"
+         id="stop2726" />
+      <stop
+         offset="0.40625"
+         style="stop-color:rgb(71.372986%,71.372986%,71.372986%);stop-opacity:1;"
+         id="stop2728" />
+      <stop
+         offset="0.410156"
+         style="stop-color:rgb(70.980835%,70.980835%,70.980835%);stop-opacity:1;"
+         id="stop2730" />
+      <stop
+         offset="0.414063"
+         style="stop-color:rgb(70.588684%,70.588684%,70.588684%);stop-opacity:1;"
+         id="stop2732" />
+      <stop
+         offset="0.417969"
+         style="stop-color:rgb(70.196533%,70.196533%,70.196533%);stop-opacity:1;"
+         id="stop2734" />
+      <stop
+         offset="0.421875"
+         style="stop-color:rgb(70.196533%,70.196533%,70.196533%);stop-opacity:1;"
+         id="stop2736" />
+      <stop
+         offset="0.425781"
+         style="stop-color:rgb(69.804382%,69.804382%,69.804382%);stop-opacity:1;"
+         id="stop2738" />
+      <stop
+         offset="0.429688"
+         style="stop-color:rgb(69.412231%,69.412231%,69.412231%);stop-opacity:1;"
+         id="stop2740" />
+      <stop
+         offset="0.433594"
+         style="stop-color:rgb(69.412231%,69.020081%,69.412231%);stop-opacity:1;"
+         id="stop2742" />
+      <stop
+         offset="0.4375"
+         style="stop-color:rgb(69.020081%,69.020081%,69.020081%);stop-opacity:1;"
+         id="stop2744" />
+      <stop
+         offset="0.441406"
+         style="stop-color:rgb(68.62793%,68.62793%,68.62793%);stop-opacity:1;"
+         id="stop2746" />
+      <stop
+         offset="0.445313"
+         style="stop-color:rgb(68.62793%,68.62793%,68.62793%);stop-opacity:1;"
+         id="stop2748" />
+      <stop
+         offset="0.449219"
+         style="stop-color:rgb(68.235779%,68.235779%,68.235779%);stop-opacity:1;"
+         id="stop2750" />
+      <stop
+         offset="0.453125"
+         style="stop-color:rgb(67.843628%,67.843628%,67.843628%);stop-opacity:1;"
+         id="stop2752" />
+      <stop
+         offset="0.457031"
+         style="stop-color:rgb(67.451477%,67.451477%,67.451477%);stop-opacity:1;"
+         id="stop2754" />
+      <stop
+         offset="0.460938"
+         style="stop-color:rgb(67.059326%,67.059326%,67.059326%);stop-opacity:1;"
+         id="stop2756" />
+      <stop
+         offset="0.464844"
+         style="stop-color:rgb(66.667175%,66.667175%,66.667175%);stop-opacity:1;"
+         id="stop2758" />
+      <stop
+         offset="0.46875"
+         style="stop-color:rgb(66.667175%,66.667175%,66.667175%);stop-opacity:1;"
+         id="stop2760" />
+      <stop
+         offset="0.472656"
+         style="stop-color:rgb(66.275024%,66.275024%,66.275024%);stop-opacity:1;"
+         id="stop2762" />
+      <stop
+         offset="0.476563"
+         style="stop-color:rgb(65.882874%,65.882874%,65.882874%);stop-opacity:1;"
+         id="stop2764" />
+      <stop
+         offset="0.480469"
+         style="stop-color:rgb(65.882874%,65.882874%,65.882874%);stop-opacity:1;"
+         id="stop2766" />
+      <stop
+         offset="0.484375"
+         style="stop-color:rgb(65.490723%,65.490723%,65.490723%);stop-opacity:1;"
+         id="stop2768" />
+      <stop
+         offset="0.488281"
+         style="stop-color:rgb(65.098572%,65.098572%,65.098572%);stop-opacity:1;"
+         id="stop2770" />
+      <stop
+         offset="0.492188"
+         style="stop-color:rgb(64.706421%,64.706421%,64.706421%);stop-opacity:1;"
+         id="stop2772" />
+      <stop
+         offset="0.496094"
+         style="stop-color:rgb(64.31427%,64.31427%,64.31427%);stop-opacity:1;"
+         id="stop2774" />
+      <stop
+         offset="0.5"
+         style="stop-color:rgb(64.31427%,64.31427%,64.31427%);stop-opacity:1;"
+         id="stop2776" />
+      <stop
+         offset="0.503906"
+         style="stop-color:rgb(63.922119%,63.922119%,63.922119%);stop-opacity:1;"
+         id="stop2778" />
+      <stop
+         offset="0.507813"
+         style="stop-color:rgb(63.529968%,63.529968%,63.529968%);stop-opacity:1;"
+         id="stop2780" />
+      <stop
+         offset="0.511719"
+         style="stop-color:rgb(63.137817%,63.137817%,63.137817%);stop-opacity:1;"
+         id="stop2782" />
+      <stop
+         offset="0.515625"
+         style="stop-color:rgb(62.745667%,62.745667%,62.745667%);stop-opacity:1;"
+         id="stop2784" />
+      <stop
+         offset="0.519531"
+         style="stop-color:rgb(62.353516%,62.353516%,62.353516%);stop-opacity:1;"
+         id="stop2786" />
+      <stop
+         offset="0.523438"
+         style="stop-color:rgb(62.353516%,62.353516%,62.353516%);stop-opacity:1;"
+         id="stop2788" />
+      <stop
+         offset="0.527344"
+         style="stop-color:rgb(61.961365%,61.961365%,61.961365%);stop-opacity:1;"
+         id="stop2790" />
+      <stop
+         offset="0.53125"
+         style="stop-color:rgb(61.961365%,61.961365%,61.961365%);stop-opacity:1;"
+         id="stop2792" />
+      <stop
+         offset="0.535156"
+         style="stop-color:rgb(61.569214%,61.569214%,61.569214%);stop-opacity:1;"
+         id="stop2794" />
+      <stop
+         offset="0.539063"
+         style="stop-color:rgb(61.177063%,61.177063%,61.177063%);stop-opacity:1;"
+         id="stop2796" />
+      <stop
+         offset="0.542969"
+         style="stop-color:rgb(60.784912%,60.784912%,60.784912%);stop-opacity:1;"
+         id="stop2798" />
+      <stop
+         offset="0.546875"
+         style="stop-color:rgb(60.784912%,60.784912%,60.784912%);stop-opacity:1;"
+         id="stop2800" />
+      <stop
+         offset="0.550781"
+         style="stop-color:rgb(60.392761%,60.392761%,60.392761%);stop-opacity:1;"
+         id="stop2802" />
+      <stop
+         offset="0.554688"
+         style="stop-color:rgb(60.00061%,60.00061%,60.00061%);stop-opacity:1;"
+         id="stop2804" />
+      <stop
+         offset="0.558594"
+         style="stop-color:rgb(59.608459%,59.608459%,59.608459%);stop-opacity:1;"
+         id="stop2806" />
+      <stop
+         offset="0.5625"
+         style="stop-color:rgb(59.216309%,59.216309%,59.216309%);stop-opacity:1;"
+         id="stop2808" />
+      <stop
+         offset="0.566406"
+         style="stop-color:rgb(58.824158%,58.824158%,58.824158%);stop-opacity:1;"
+         id="stop2810" />
+      <stop
+         offset="0.570313"
+         style="stop-color:rgb(58.432007%,58.432007%,58.432007%);stop-opacity:1;"
+         id="stop2812" />
+      <stop
+         offset="0.574219"
+         style="stop-color:rgb(58.432007%,58.432007%,58.432007%);stop-opacity:1;"
+         id="stop2814" />
+      <stop
+         offset="0.578125"
+         style="stop-color:rgb(58.039856%,58.039856%,58.039856%);stop-opacity:1;"
+         id="stop2816" />
+      <stop
+         offset="0.582031"
+         style="stop-color:rgb(57.647705%,57.647705%,57.647705%);stop-opacity:1;"
+         id="stop2818" />
+      <stop
+         offset="0.585938"
+         style="stop-color:rgb(57.255554%,57.255554%,57.255554%);stop-opacity:1;"
+         id="stop2820" />
+      <stop
+         offset="0.589844"
+         style="stop-color:rgb(56.863403%,56.863403%,56.863403%);stop-opacity:1;"
+         id="stop2822" />
+      <stop
+         offset="0.59375"
+         style="stop-color:rgb(56.863403%,56.471252%,56.863403%);stop-opacity:1;"
+         id="stop2824" />
+      <stop
+         offset="0.597656"
+         style="stop-color:rgb(56.863403%,56.471252%,56.863403%);stop-opacity:1;"
+         id="stop2826" />
+      <stop
+         offset="0.601563"
+         style="stop-color:rgb(56.471252%,56.471252%,56.471252%);stop-opacity:1;"
+         id="stop2828" />
+      <stop
+         offset="0.605469"
+         style="stop-color:rgb(56.079102%,56.079102%,56.079102%);stop-opacity:1;"
+         id="stop2830" />
+      <stop
+         offset="0.609375"
+         style="stop-color:rgb(55.686951%,55.686951%,55.686951%);stop-opacity:1;"
+         id="stop2832" />
+      <stop
+         offset="0.613281"
+         style="stop-color:rgb(55.2948%,55.2948%,55.2948%);stop-opacity:1;"
+         id="stop2834" />
+      <stop
+         offset="0.617188"
+         style="stop-color:rgb(54.902649%,54.902649%,54.902649%);stop-opacity:1;"
+         id="stop2836" />
+      <stop
+         offset="0.621094"
+         style="stop-color:rgb(54.510498%,54.510498%,54.510498%);stop-opacity:1;"
+         id="stop2838" />
+      <stop
+         offset="0.625"
+         style="stop-color:rgb(54.510498%,54.510498%,54.510498%);stop-opacity:1;"
+         id="stop2840" />
+      <stop
+         offset="0.628906"
+         style="stop-color:rgb(54.118347%,54.118347%,54.118347%);stop-opacity:1;"
+         id="stop2842" />
+      <stop
+         offset="0.632813"
+         style="stop-color:rgb(53.726196%,53.726196%,53.726196%);stop-opacity:1;"
+         id="stop2844" />
+      <stop
+         offset="0.636719"
+         style="stop-color:rgb(53.334045%,53.334045%,53.334045%);stop-opacity:1;"
+         id="stop2846" />
+      <stop
+         offset="0.640625"
+         style="stop-color:rgb(52.941895%,52.941895%,52.941895%);stop-opacity:1;"
+         id="stop2848" />
+      <stop
+         offset="0.644531"
+         style="stop-color:rgb(52.549744%,52.549744%,52.549744%);stop-opacity:1;"
+         id="stop2850" />
+      <stop
+         offset="0.648438"
+         style="stop-color:rgb(52.549744%,52.549744%,52.549744%);stop-opacity:1;"
+         id="stop2852" />
+      <stop
+         offset="0.652344"
+         style="stop-color:rgb(52.157593%,52.157593%,52.157593%);stop-opacity:1;"
+         id="stop2854" />
+      <stop
+         offset="0.65625"
+         style="stop-color:rgb(51.765442%,51.765442%,51.765442%);stop-opacity:1;"
+         id="stop2856" />
+      <stop
+         offset="0.660156"
+         style="stop-color:rgb(51.373291%,51.373291%,51.373291%);stop-opacity:1;"
+         id="stop2858" />
+      <stop
+         offset="0.664063"
+         style="stop-color:rgb(50.98114%,50.98114%,50.98114%);stop-opacity:1;"
+         id="stop2860" />
+      <stop
+         offset="0.667969"
+         style="stop-color:rgb(50.588989%,50.588989%,50.588989%);stop-opacity:1;"
+         id="stop2862" />
+      <stop
+         offset="0.671875"
+         style="stop-color:rgb(50.588989%,50.588989%,50.588989%);stop-opacity:1;"
+         id="stop2864" />
+      <stop
+         offset="0.675781"
+         style="stop-color:rgb(50.196838%,50.196838%,50.196838%);stop-opacity:1;"
+         id="stop2866" />
+      <stop
+         offset="0.679688"
+         style="stop-color:rgb(49.803162%,49.803162%,49.803162%);stop-opacity:1;"
+         id="stop2868" />
+      <stop
+         offset="0.683594"
+         style="stop-color:rgb(49.411011%,49.411011%,49.411011%);stop-opacity:1;"
+         id="stop2870" />
+      <stop
+         offset="0.6875"
+         style="stop-color:rgb(49.01886%,49.01886%,49.01886%);stop-opacity:1;"
+         id="stop2872" />
+      <stop
+         offset="0.691406"
+         style="stop-color:rgb(48.626709%,48.626709%,48.626709%);stop-opacity:1;"
+         id="stop2874" />
+      <stop
+         offset="0.695313"
+         style="stop-color:rgb(48.234558%,48.234558%,48.234558%);stop-opacity:1;"
+         id="stop2876" />
+      <stop
+         offset="0.699219"
+         style="stop-color:rgb(47.842407%,47.842407%,47.842407%);stop-opacity:1;"
+         id="stop2878" />
+      <stop
+         offset="0.703125"
+         style="stop-color:rgb(47.842407%,47.842407%,47.842407%);stop-opacity:1;"
+         id="stop2880" />
+      <stop
+         offset="0.707031"
+         style="stop-color:rgb(47.450256%,47.450256%,47.450256%);stop-opacity:1;"
+         id="stop2882" />
+      <stop
+         offset="0.710938"
+         style="stop-color:rgb(47.058105%,47.058105%,47.058105%);stop-opacity:1;"
+         id="stop2884" />
+      <stop
+         offset="0.714844"
+         style="stop-color:rgb(46.665955%,46.665955%,46.665955%);stop-opacity:1;"
+         id="stop2886" />
+      <stop
+         offset="0.71875"
+         style="stop-color:rgb(46.273804%,46.273804%,46.273804%);stop-opacity:1;"
+         id="stop2888" />
+      <stop
+         offset="0.722656"
+         style="stop-color:rgb(45.881653%,45.881653%,45.881653%);stop-opacity:1;"
+         id="stop2890" />
+      <stop
+         offset="0.726563"
+         style="stop-color:rgb(45.881653%,45.881653%,45.881653%);stop-opacity:1;"
+         id="stop2892" />
+      <stop
+         offset="0.730469"
+         style="stop-color:rgb(45.489502%,45.489502%,45.489502%);stop-opacity:1;"
+         id="stop2894" />
+      <stop
+         offset="0.734375"
+         style="stop-color:rgb(45.097351%,45.097351%,45.097351%);stop-opacity:1;"
+         id="stop2896" />
+      <stop
+         offset="0.738281"
+         style="stop-color:rgb(44.7052%,44.7052%,44.7052%);stop-opacity:1;"
+         id="stop2898" />
+      <stop
+         offset="0.742188"
+         style="stop-color:rgb(44.313049%,44.313049%,44.313049%);stop-opacity:1;"
+         id="stop2900" />
+      <stop
+         offset="0.746094"
+         style="stop-color:rgb(43.920898%,43.920898%,43.920898%);stop-opacity:1;"
+         id="stop2902" />
+      <stop
+         offset="0.75"
+         style="stop-color:rgb(43.920898%,43.920898%,43.920898%);stop-opacity:1;"
+         id="stop2904" />
+      <stop
+         offset="0.753906"
+         style="stop-color:rgb(43.528748%,43.528748%,43.528748%);stop-opacity:1;"
+         id="stop2906" />
+      <stop
+         offset="0.757813"
+         style="stop-color:rgb(43.136597%,43.136597%,43.136597%);stop-opacity:1;"
+         id="stop2908" />
+      <stop
+         offset="0.761719"
+         style="stop-color:rgb(42.744446%,42.744446%,42.744446%);stop-opacity:1;"
+         id="stop2910" />
+      <stop
+         offset="0.765625"
+         style="stop-color:rgb(42.352295%,42.352295%,42.352295%);stop-opacity:1;"
+         id="stop2912" />
+      <stop
+         offset="0.769531"
+         style="stop-color:rgb(41.960144%,41.960144%,41.960144%);stop-opacity:1;"
+         id="stop2914" />
+      <stop
+         offset="0.773438"
+         style="stop-color:rgb(41.567993%,41.567993%,41.567993%);stop-opacity:1;"
+         id="stop2916" />
+      <stop
+         offset="0.777344"
+         style="stop-color:rgb(41.567993%,41.567993%,41.567993%);stop-opacity:1;"
+         id="stop2918" />
+      <stop
+         offset="0.78125"
+         style="stop-color:rgb(41.175842%,41.175842%,41.175842%);stop-opacity:1;"
+         id="stop2920" />
+      <stop
+         offset="0.785156"
+         style="stop-color:rgb(40.783691%,40.783691%,40.783691%);stop-opacity:1;"
+         id="stop2922" />
+      <stop
+         offset="0.789063"
+         style="stop-color:rgb(40.391541%,40.391541%,40.391541%);stop-opacity:1;"
+         id="stop2924" />
+      <stop
+         offset="0.792969"
+         style="stop-color:rgb(39.99939%,39.99939%,39.99939%);stop-opacity:1;"
+         id="stop2926" />
+      <stop
+         offset="0.796875"
+         style="stop-color:rgb(39.607239%,39.607239%,39.607239%);stop-opacity:1;"
+         id="stop2928" />
+      <stop
+         offset="0.800781"
+         style="stop-color:rgb(39.607239%,39.607239%,39.607239%);stop-opacity:1;"
+         id="stop2930" />
+      <stop
+         offset="0.804688"
+         style="stop-color:rgb(39.215088%,39.215088%,39.215088%);stop-opacity:1;"
+         id="stop2932" />
+      <stop
+         offset="0.808594"
+         style="stop-color:rgb(38.822937%,38.822937%,38.822937%);stop-opacity:1;"
+         id="stop2934" />
+      <stop
+         offset="0.8125"
+         style="stop-color:rgb(38.430786%,38.430786%,38.430786%);stop-opacity:1;"
+         id="stop2936" />
+      <stop
+         offset="0.816406"
+         style="stop-color:rgb(38.038635%,38.038635%,38.038635%);stop-opacity:1;"
+         id="stop2938" />
+      <stop
+         offset="0.820313"
+         style="stop-color:rgb(37.646484%,37.646484%,37.646484%);stop-opacity:1;"
+         id="stop2940" />
+      <stop
+         offset="0.824219"
+         style="stop-color:rgb(36.862183%,36.862183%,36.862183%);stop-opacity:1;"
+         id="stop2942" />
+      <stop
+         offset="0.828125"
+         style="stop-color:rgb(36.862183%,36.862183%,36.862183%);stop-opacity:1;"
+         id="stop2944" />
+      <stop
+         offset="0.832031"
+         style="stop-color:rgb(36.470032%,36.470032%,36.470032%);stop-opacity:1;"
+         id="stop2946" />
+      <stop
+         offset="0.835938"
+         style="stop-color:rgb(36.077881%,36.077881%,36.077881%);stop-opacity:1;"
+         id="stop2948" />
+      <stop
+         offset="0.839844"
+         style="stop-color:rgb(35.68573%,35.68573%,35.68573%);stop-opacity:1;"
+         id="stop2950" />
+      <stop
+         offset="0.84375"
+         style="stop-color:rgb(35.293579%,35.293579%,35.293579%);stop-opacity:1;"
+         id="stop2952" />
+      <stop
+         offset="0.847656"
+         style="stop-color:rgb(34.901428%,34.901428%,34.901428%);stop-opacity:1;"
+         id="stop2954" />
+      <stop
+         offset="0.851563"
+         style="stop-color:rgb(34.509277%,34.509277%,34.509277%);stop-opacity:1;"
+         id="stop2956" />
+      <stop
+         offset="0.855469"
+         style="stop-color:rgb(34.509277%,34.509277%,34.509277%);stop-opacity:1;"
+         id="stop2958" />
+      <stop
+         offset="0.859375"
+         style="stop-color:rgb(34.117126%,34.117126%,34.117126%);stop-opacity:1;"
+         id="stop2960" />
+      <stop
+         offset="0.863281"
+         style="stop-color:rgb(33.724976%,33.724976%,33.724976%);stop-opacity:1;"
+         id="stop2962" />
+      <stop
+         offset="0.867188"
+         style="stop-color:rgb(33.332825%,33.332825%,33.332825%);stop-opacity:1;"
+         id="stop2964" />
+      <stop
+         offset="0.871094"
+         style="stop-color:rgb(32.940674%,32.940674%,32.940674%);stop-opacity:1;"
+         id="stop2966" />
+      <stop
+         offset="0.875"
+         style="stop-color:rgb(32.156372%,32.156372%,32.156372%);stop-opacity:1;"
+         id="stop2968" />
+      <stop
+         offset="0.878906"
+         style="stop-color:rgb(32.156372%,32.156372%,32.156372%);stop-opacity:1;"
+         id="stop2970" />
+      <stop
+         offset="0.882813"
+         style="stop-color:rgb(31.764221%,31.764221%,31.764221%);stop-opacity:1;"
+         id="stop2972" />
+      <stop
+         offset="0.886719"
+         style="stop-color:rgb(31.37207%,31.37207%,31.37207%);stop-opacity:1;"
+         id="stop2974" />
+      <stop
+         offset="0.890625"
+         style="stop-color:rgb(30.979919%,30.979919%,30.979919%);stop-opacity:1;"
+         id="stop2976" />
+      <stop
+         offset="0.894531"
+         style="stop-color:rgb(30.587769%,30.587769%,30.587769%);stop-opacity:1;"
+         id="stop2978" />
+      <stop
+         offset="0.898438"
+         style="stop-color:rgb(30.195618%,30.195618%,30.195618%);stop-opacity:1;"
+         id="stop2980" />
+      <stop
+         offset="0.902344"
+         style="stop-color:rgb(29.803467%,29.803467%,29.803467%);stop-opacity:1;"
+         id="stop2982" />
+      <stop
+         offset="0.90625"
+         style="stop-color:rgb(29.803467%,29.803467%,29.803467%);stop-opacity:1;"
+         id="stop2984" />
+      <stop
+         offset="0.910156"
+         style="stop-color:rgb(29.411316%,29.411316%,29.411316%);stop-opacity:1;"
+         id="stop2986" />
+      <stop
+         offset="0.914063"
+         style="stop-color:rgb(28.627014%,28.627014%,28.627014%);stop-opacity:1;"
+         id="stop2988" />
+      <stop
+         offset="0.917969"
+         style="stop-color:rgb(28.234863%,28.234863%,28.234863%);stop-opacity:1;"
+         id="stop2990" />
+      <stop
+         offset="0.921875"
+         style="stop-color:rgb(27.842712%,27.842712%,27.842712%);stop-opacity:1;"
+         id="stop2992" />
+      <stop
+         offset="0.925781"
+         style="stop-color:rgb(27.450562%,27.450562%,27.450562%);stop-opacity:1;"
+         id="stop2994" />
+      <stop
+         offset="0.929688"
+         style="stop-color:rgb(27.450562%,27.450562%,27.450562%);stop-opacity:1;"
+         id="stop2996" />
+      <stop
+         offset="0.933594"
+         style="stop-color:rgb(27.058411%,27.058411%,27.058411%);stop-opacity:1;"
+         id="stop2998" />
+      <stop
+         offset="0.9375"
+         style="stop-color:rgb(26.66626%,26.66626%,26.66626%);stop-opacity:1;"
+         id="stop3000" />
+      <stop
+         offset="0.941406"
+         style="stop-color:rgb(25.881958%,25.881958%,25.881958%);stop-opacity:1;"
+         id="stop3002" />
+      <stop
+         offset="0.945313"
+         style="stop-color:rgb(25.489807%,25.489807%,25.489807%);stop-opacity:1;"
+         id="stop3004" />
+      <stop
+         offset="0.949219"
+         style="stop-color:rgb(25.097656%,25.097656%,25.097656%);stop-opacity:1;"
+         id="stop3006" />
+      <stop
+         offset="0.953125"
+         style="stop-color:rgb(25.097656%,25.097656%,25.097656%);stop-opacity:1;"
+         id="stop3008" />
+      <stop
+         offset="0.957031"
+         style="stop-color:rgb(24.705505%,24.705505%,24.705505%);stop-opacity:1;"
+         id="stop3010" />
+      <stop
+         offset="0.960938"
+         style="stop-color:rgb(24.313354%,24.313354%,24.313354%);stop-opacity:1;"
+         id="stop3012" />
+      <stop
+         offset="0.964844"
+         style="stop-color:rgb(23.529053%,23.529053%,23.529053%);stop-opacity:1;"
+         id="stop3014" />
+      <stop
+         offset="0.96875"
+         style="stop-color:rgb(23.136902%,23.136902%,23.136902%);stop-opacity:1;"
+         id="stop3016" />
+      <stop
+         offset="0.972656"
+         style="stop-color:rgb(22.744751%,22.744751%,22.744751%);stop-opacity:1;"
+         id="stop3018" />
+      <stop
+         offset="0.976563"
+         style="stop-color:rgb(22.3526%,22.3526%,22.3526%);stop-opacity:1;"
+         id="stop3020" />
+      <stop
+         offset="0.980469"
+         style="stop-color:rgb(21.568298%,21.568298%,21.568298%);stop-opacity:1;"
+         id="stop3022" />
+      <stop
+         offset="0.984375"
+         style="stop-color:rgb(21.568298%,21.568298%,21.568298%);stop-opacity:1;"
+         id="stop3024" />
+      <stop
+         offset="0.988281"
+         style="stop-color:rgb(21.176147%,21.176147%,21.176147%);stop-opacity:1;"
+         id="stop3026" />
+      <stop
+         offset="0.992188"
+         style="stop-color:rgb(20.783997%,20.783997%,20.783997%);stop-opacity:1;"
+         id="stop3028" />
+      <stop
+         offset="0.996094"
+         style="stop-color:rgb(20.391846%,20.391846%,20.391846%);stop-opacity:1;"
+         id="stop3030" />
+      <stop
+         offset="1"
+         style="stop-color:rgb(19.607544%,19.607544%,19.607544%);stop-opacity:1;"
+         id="stop3032" />
+    </linearGradient>
+    <clipPath
+       id="clip7-2">
+      <path
+         d="m 279.4375,190.53125 h 56.71484 v 61.57031 H 279.4375 Z m 0,0"
+         id="path3035-9" />
+    </clipPath>
+    <linearGradient
+       id="linear2"
+       gradientUnits="userSpaceOnUse"
+       x1="-60.25"
+       y1="0"
+       x2="60.25"
+       y2="0"
+       gradientTransform="matrix(0,0.51093,-0.51093,0,307.79419,221.31671)">
+      <stop
+         offset="0"
+         style="stop-color:rgb(100%,100%,100%);stop-opacity:1;"
+         id="stop3038" />
+      <stop
+         offset="0.00390625"
+         style="stop-color:rgb(99.607849%,99.607849%,99.607849%);stop-opacity:1;"
+         id="stop3040" />
+      <stop
+         offset="0.0078125"
+         style="stop-color:rgb(99.215698%,99.215698%,99.215698%);stop-opacity:1;"
+         id="stop3042" />
+      <stop
+         offset="0.0117188"
+         style="stop-color:rgb(99.215698%,99.215698%,99.215698%);stop-opacity:1;"
+         id="stop3044" />
+      <stop
+         offset="0.015625"
+         style="stop-color:rgb(99.215698%,99.215698%,99.215698%);stop-opacity:1;"
+         id="stop3046" />
+      <stop
+         offset="0.0195312"
+         style="stop-color:rgb(98.823547%,98.823547%,98.823547%);stop-opacity:1;"
+         id="stop3048" />
+      <stop
+         offset="0.0234375"
+         style="stop-color:rgb(98.431396%,98.431396%,98.431396%);stop-opacity:1;"
+         id="stop3050" />
+      <stop
+         offset="0.0273437"
+         style="stop-color:rgb(98.039246%,98.039246%,98.039246%);stop-opacity:1;"
+         id="stop3052" />
+      <stop
+         offset="0.03125"
+         style="stop-color:rgb(97.647095%,97.647095%,97.647095%);stop-opacity:1;"
+         id="stop3054" />
+      <stop
+         offset="0.0351562"
+         style="stop-color:rgb(97.647095%,97.647095%,97.647095%);stop-opacity:1;"
+         id="stop3056" />
+      <stop
+         offset="0.0390625"
+         style="stop-color:rgb(97.647095%,97.647095%,97.647095%);stop-opacity:1;"
+         id="stop3058" />
+      <stop
+         offset="0.0429687"
+         style="stop-color:rgb(97.254944%,97.254944%,97.254944%);stop-opacity:1;"
+         id="stop3060" />
+      <stop
+         offset="0.046875"
+         style="stop-color:rgb(96.862793%,96.862793%,96.862793%);stop-opacity:1;"
+         id="stop3062" />
+      <stop
+         offset="0.0507813"
+         style="stop-color:rgb(96.470642%,96.470642%,96.470642%);stop-opacity:1;"
+         id="stop3064" />
+      <stop
+         offset="0.0546875"
+         style="stop-color:rgb(96.078491%,96.078491%,96.078491%);stop-opacity:1;"
+         id="stop3066" />
+      <stop
+         offset="0.0585937"
+         style="stop-color:rgb(96.078491%,96.078491%,96.078491%);stop-opacity:1;"
+         id="stop3068" />
+      <stop
+         offset="0.0625"
+         style="stop-color:rgb(96.078491%,95.68634%,95.68634%);stop-opacity:1;"
+         id="stop3070" />
+      <stop
+         offset="0.0664062"
+         style="stop-color:rgb(95.68634%,95.294189%,95.294189%);stop-opacity:1;"
+         id="stop3072" />
+      <stop
+         offset="0.0703125"
+         style="stop-color:rgb(95.294189%,95.294189%,95.294189%);stop-opacity:1;"
+         id="stop3074" />
+      <stop
+         offset="0.0742187"
+         style="stop-color:rgb(94.902039%,94.902039%,94.902039%);stop-opacity:1;"
+         id="stop3076" />
+      <stop
+         offset="0.078125"
+         style="stop-color:rgb(94.509888%,94.509888%,94.509888%);stop-opacity:1;"
+         id="stop3078" />
+      <stop
+         offset="0.0820312"
+         style="stop-color:rgb(94.509888%,94.509888%,94.509888%);stop-opacity:1;"
+         id="stop3080" />
+      <stop
+         offset="0.0859375"
+         style="stop-color:rgb(94.117737%,94.117737%,94.117737%);stop-opacity:1;"
+         id="stop3082" />
+      <stop
+         offset="0.0898438"
+         style="stop-color:rgb(93.725586%,93.725586%,93.725586%);stop-opacity:1;"
+         id="stop3084" />
+      <stop
+         offset="0.09375"
+         style="stop-color:rgb(93.725586%,93.725586%,93.725586%);stop-opacity:1;"
+         id="stop3086" />
+      <stop
+         offset="0.0976563"
+         style="stop-color:rgb(93.333435%,93.333435%,93.333435%);stop-opacity:1;"
+         id="stop3088" />
+      <stop
+         offset="0.101563"
+         style="stop-color:rgb(92.941284%,92.941284%,92.941284%);stop-opacity:1;"
+         id="stop3090" />
+      <stop
+         offset="0.105469"
+         style="stop-color:rgb(92.941284%,92.941284%,92.941284%);stop-opacity:1;"
+         id="stop3092" />
+      <stop
+         offset="0.109375"
+         style="stop-color:rgb(92.549133%,92.549133%,92.549133%);stop-opacity:1;"
+         id="stop3094" />
+      <stop
+         offset="0.113281"
+         style="stop-color:rgb(92.156982%,92.156982%,92.156982%);stop-opacity:1;"
+         id="stop3096" />
+      <stop
+         offset="0.117187"
+         style="stop-color:rgb(92.156982%,92.156982%,92.156982%);stop-opacity:1;"
+         id="stop3098" />
+      <stop
+         offset="0.121094"
+         style="stop-color:rgb(91.764832%,91.764832%,91.764832%);stop-opacity:1;"
+         id="stop3100" />
+      <stop
+         offset="0.125"
+         style="stop-color:rgb(91.372681%,91.372681%,91.372681%);stop-opacity:1;"
+         id="stop3102" />
+      <stop
+         offset="0.128906"
+         style="stop-color:rgb(91.372681%,91.372681%,91.372681%);stop-opacity:1;"
+         id="stop3104" />
+      <stop
+         offset="0.132813"
+         style="stop-color:rgb(90.98053%,90.98053%,90.98053%);stop-opacity:1;"
+         id="stop3106" />
+      <stop
+         offset="0.136719"
+         style="stop-color:rgb(90.588379%,90.588379%,90.588379%);stop-opacity:1;"
+         id="stop3108" />
+      <stop
+         offset="0.140625"
+         style="stop-color:rgb(90.588379%,90.588379%,90.588379%);stop-opacity:1;"
+         id="stop3110" />
+      <stop
+         offset="0.144531"
+         style="stop-color:rgb(90.196228%,90.196228%,90.196228%);stop-opacity:1;"
+         id="stop3112" />
+      <stop
+         offset="0.148438"
+         style="stop-color:rgb(89.804077%,89.804077%,89.804077%);stop-opacity:1;"
+         id="stop3114" />
+      <stop
+         offset="0.152344"
+         style="stop-color:rgb(89.411926%,89.411926%,89.411926%);stop-opacity:1;"
+         id="stop3116" />
+      <stop
+         offset="0.15625"
+         style="stop-color:rgb(89.411926%,89.411926%,89.411926%);stop-opacity:1;"
+         id="stop3118" />
+      <stop
+         offset="0.160156"
+         style="stop-color:rgb(89.019775%,89.019775%,89.019775%);stop-opacity:1;"
+         id="stop3120" />
+      <stop
+         offset="0.164063"
+         style="stop-color:rgb(88.627625%,88.627625%,88.627625%);stop-opacity:1;"
+         id="stop3122" />
+      <stop
+         offset="0.167969"
+         style="stop-color:rgb(88.627625%,88.627625%,88.627625%);stop-opacity:1;"
+         id="stop3124" />
+      <stop
+         offset="0.171875"
+         style="stop-color:rgb(88.235474%,88.235474%,88.235474%);stop-opacity:1;"
+         id="stop3126" />
+      <stop
+         offset="0.175781"
+         style="stop-color:rgb(87.843323%,87.843323%,87.843323%);stop-opacity:1;"
+         id="stop3128" />
+      <stop
+         offset="0.179688"
+         style="stop-color:rgb(87.843323%,87.451172%,87.843323%);stop-opacity:1;"
+         id="stop3130" />
+      <stop
+         offset="0.183594"
+         style="stop-color:rgb(87.451172%,87.451172%,87.451172%);stop-opacity:1;"
+         id="stop3132" />
+      <stop
+         offset="0.1875"
+         style="stop-color:rgb(87.059021%,87.059021%,87.059021%);stop-opacity:1;"
+         id="stop3134" />
+      <stop
+         offset="0.191406"
+         style="stop-color:rgb(87.059021%,86.66687%,87.059021%);stop-opacity:1;"
+         id="stop3136" />
+      <stop
+         offset="0.195312"
+         style="stop-color:rgb(86.66687%,86.66687%,86.66687%);stop-opacity:1;"
+         id="stop3138" />
+      <stop
+         offset="0.199219"
+         style="stop-color:rgb(86.274719%,86.274719%,86.274719%);stop-opacity:1;"
+         id="stop3140" />
+      <stop
+         offset="0.203125"
+         style="stop-color:rgb(85.882568%,85.882568%,85.882568%);stop-opacity:1;"
+         id="stop3142" />
+      <stop
+         offset="0.207031"
+         style="stop-color:rgb(85.882568%,85.882568%,85.882568%);stop-opacity:1;"
+         id="stop3144" />
+      <stop
+         offset="0.210937"
+         style="stop-color:rgb(85.490417%,85.490417%,85.490417%);stop-opacity:1;"
+         id="stop3146" />
+      <stop
+         offset="0.214844"
+         style="stop-color:rgb(85.098267%,85.098267%,85.098267%);stop-opacity:1;"
+         id="stop3148" />
+      <stop
+         offset="0.21875"
+         style="stop-color:rgb(85.098267%,85.098267%,85.098267%);stop-opacity:1;"
+         id="stop3150" />
+      <stop
+         offset="0.222656"
+         style="stop-color:rgb(84.706116%,84.706116%,84.706116%);stop-opacity:1;"
+         id="stop3152" />
+      <stop
+         offset="0.226563"
+         style="stop-color:rgb(84.313965%,84.313965%,84.313965%);stop-opacity:1;"
+         id="stop3154" />
+      <stop
+         offset="0.230469"
+         style="stop-color:rgb(83.921814%,83.921814%,83.921814%);stop-opacity:1;"
+         id="stop3156" />
+      <stop
+         offset="0.234375"
+         style="stop-color:rgb(83.921814%,83.921814%,83.921814%);stop-opacity:1;"
+         id="stop3158" />
+      <stop
+         offset="0.238281"
+         style="stop-color:rgb(83.529663%,83.529663%,83.529663%);stop-opacity:1;"
+         id="stop3160" />
+      <stop
+         offset="0.242188"
+         style="stop-color:rgb(83.529663%,83.529663%,83.529663%);stop-opacity:1;"
+         id="stop3162" />
+      <stop
+         offset="0.246094"
+         style="stop-color:rgb(83.137512%,83.137512%,83.137512%);stop-opacity:1;"
+         id="stop3164" />
+      <stop
+         offset="0.25"
+         style="stop-color:rgb(82.745361%,82.745361%,82.745361%);stop-opacity:1;"
+         id="stop3166" />
+      <stop
+         offset="0.253906"
+         style="stop-color:rgb(82.35321%,82.35321%,82.35321%);stop-opacity:1;"
+         id="stop3168" />
+      <stop
+         offset="0.257813"
+         style="stop-color:rgb(81.96106%,81.96106%,81.96106%);stop-opacity:1;"
+         id="stop3170" />
+      <stop
+         offset="0.261719"
+         style="stop-color:rgb(81.96106%,81.568909%,81.96106%);stop-opacity:1;"
+         id="stop3172" />
+      <stop
+         offset="0.265625"
+         style="stop-color:rgb(81.96106%,81.568909%,81.96106%);stop-opacity:1;"
+         id="stop3174" />
+      <stop
+         offset="0.269531"
+         style="stop-color:rgb(81.568909%,81.568909%,81.568909%);stop-opacity:1;"
+         id="stop3176" />
+      <stop
+         offset="0.273438"
+         style="stop-color:rgb(81.176758%,81.176758%,81.176758%);stop-opacity:1;"
+         id="stop3178" />
+      <stop
+         offset="0.277344"
+         style="stop-color:rgb(80.784607%,80.784607%,80.784607%);stop-opacity:1;"
+         id="stop3180" />
+      <stop
+         offset="0.28125"
+         style="stop-color:rgb(80.392456%,80.392456%,80.392456%);stop-opacity:1;"
+         id="stop3182" />
+      <stop
+         offset="0.285156"
+         style="stop-color:rgb(80.000305%,80.000305%,80.000305%);stop-opacity:1;"
+         id="stop3184" />
+      <stop
+         offset="0.289063"
+         style="stop-color:rgb(79.608154%,79.608154%,79.608154%);stop-opacity:1;"
+         id="stop3186" />
+      <stop
+         offset="0.292969"
+         style="stop-color:rgb(79.608154%,79.608154%,79.608154%);stop-opacity:1;"
+         id="stop3188" />
+      <stop
+         offset="0.296875"
+         style="stop-color:rgb(79.608154%,79.608154%,79.608154%);stop-opacity:1;"
+         id="stop3190" />
+      <stop
+         offset="0.300781"
+         style="stop-color:rgb(79.216003%,79.216003%,79.216003%);stop-opacity:1;"
+         id="stop3192" />
+      <stop
+         offset="0.304688"
+         style="stop-color:rgb(78.823853%,78.823853%,78.823853%);stop-opacity:1;"
+         id="stop3194" />
+      <stop
+         offset="0.308594"
+         style="stop-color:rgb(78.431702%,78.431702%,78.431702%);stop-opacity:1;"
+         id="stop3196" />
+      <stop
+         offset="0.3125"
+         style="stop-color:rgb(78.039551%,78.039551%,78.039551%);stop-opacity:1;"
+         id="stop3198" />
+      <stop
+         offset="0.316406"
+         style="stop-color:rgb(77.6474%,77.6474%,77.6474%);stop-opacity:1;"
+         id="stop3200" />
+      <stop
+         offset="0.320313"
+         style="stop-color:rgb(77.6474%,77.6474%,77.6474%);stop-opacity:1;"
+         id="stop3202" />
+      <stop
+         offset="0.324219"
+         style="stop-color:rgb(77.255249%,77.255249%,77.255249%);stop-opacity:1;"
+         id="stop3204" />
+      <stop
+         offset="0.328125"
+         style="stop-color:rgb(77.255249%,77.255249%,77.255249%);stop-opacity:1;"
+         id="stop3206" />
+      <stop
+         offset="0.332031"
+         style="stop-color:rgb(76.863098%,76.863098%,76.863098%);stop-opacity:1;"
+         id="stop3208" />
+      <stop
+         offset="0.335938"
+         style="stop-color:rgb(76.470947%,76.470947%,76.470947%);stop-opacity:1;"
+         id="stop3210" />
+      <stop
+         offset="0.339844"
+         style="stop-color:rgb(76.078796%,76.078796%,76.078796%);stop-opacity:1;"
+         id="stop3212" />
+      <stop
+         offset="0.34375"
+         style="stop-color:rgb(76.078796%,76.078796%,76.078796%);stop-opacity:1;"
+         id="stop3214" />
+      <stop
+         offset="0.347656"
+         style="stop-color:rgb(75.686646%,75.686646%,75.686646%);stop-opacity:1;"
+         id="stop3216" />
+      <stop
+         offset="0.351563"
+         style="stop-color:rgb(75.294495%,75.294495%,75.294495%);stop-opacity:1;"
+         id="stop3218" />
+      <stop
+         offset="0.355469"
+         style="stop-color:rgb(74.902344%,74.902344%,74.902344%);stop-opacity:1;"
+         id="stop3220" />
+      <stop
+         offset="0.359375"
+         style="stop-color:rgb(74.902344%,74.902344%,74.902344%);stop-opacity:1;"
+         id="stop3222" />
+      <stop
+         offset="0.363281"
+         style="stop-color:rgb(74.510193%,74.510193%,74.510193%);stop-opacity:1;"
+         id="stop3224" />
+      <stop
+         offset="0.367188"
+         style="stop-color:rgb(74.118042%,74.118042%,74.118042%);stop-opacity:1;"
+         id="stop3226" />
+      <stop
+         offset="0.371094"
+         style="stop-color:rgb(74.118042%,74.118042%,74.118042%);stop-opacity:1;"
+         id="stop3228" />
+      <stop
+         offset="0.375"
+         style="stop-color:rgb(73.725891%,73.725891%,73.725891%);stop-opacity:1;"
+         id="stop3230" />
+      <stop
+         offset="0.378906"
+         style="stop-color:rgb(73.33374%,73.33374%,73.33374%);stop-opacity:1;"
+         id="stop3232" />
+      <stop
+         offset="0.382813"
+         style="stop-color:rgb(72.941589%,72.941589%,72.941589%);stop-opacity:1;"
+         id="stop3234" />
+      <stop
+         offset="0.386719"
+         style="stop-color:rgb(72.549438%,72.549438%,72.549438%);stop-opacity:1;"
+         id="stop3236" />
+      <stop
+         offset="0.390625"
+         style="stop-color:rgb(72.157288%,72.157288%,72.157288%);stop-opacity:1;"
+         id="stop3238" />
+      <stop
+         offset="0.394531"
+         style="stop-color:rgb(72.157288%,72.157288%,72.157288%);stop-opacity:1;"
+         id="stop3240" />
+      <stop
+         offset="0.398438"
+         style="stop-color:rgb(72.157288%,72.157288%,72.157288%);stop-opacity:1;"
+         id="stop3242" />
+      <stop
+         offset="0.402344"
+         style="stop-color:rgb(71.765137%,71.765137%,71.765137%);stop-opacity:1;"
+         id="stop3244" />
+      <stop
+         offset="0.40625"
+         style="stop-color:rgb(71.372986%,71.372986%,71.372986%);stop-opacity:1;"
+         id="stop3246" />
+      <stop
+         offset="0.410156"
+         style="stop-color:rgb(70.980835%,70.980835%,70.980835%);stop-opacity:1;"
+         id="stop3248" />
+      <stop
+         offset="0.414063"
+         style="stop-color:rgb(70.588684%,70.588684%,70.588684%);stop-opacity:1;"
+         id="stop3250" />
+      <stop
+         offset="0.417969"
+         style="stop-color:rgb(70.196533%,70.196533%,70.196533%);stop-opacity:1;"
+         id="stop3252" />
+      <stop
+         offset="0.421875"
+         style="stop-color:rgb(70.196533%,70.196533%,70.196533%);stop-opacity:1;"
+         id="stop3254" />
+      <stop
+         offset="0.425781"
+         style="stop-color:rgb(69.804382%,69.804382%,69.804382%);stop-opacity:1;"
+         id="stop3256" />
+      <stop
+         offset="0.429688"
+         style="stop-color:rgb(69.412231%,69.412231%,69.412231%);stop-opacity:1;"
+         id="stop3258" />
+      <stop
+         offset="0.433594"
+         style="stop-color:rgb(69.412231%,69.020081%,69.412231%);stop-opacity:1;"
+         id="stop3260" />
+      <stop
+         offset="0.4375"
+         style="stop-color:rgb(69.020081%,69.020081%,69.020081%);stop-opacity:1;"
+         id="stop3262" />
+      <stop
+         offset="0.441406"
+         style="stop-color:rgb(68.62793%,68.62793%,68.62793%);stop-opacity:1;"
+         id="stop3264" />
+      <stop
+         offset="0.445313"
+         style="stop-color:rgb(68.62793%,68.62793%,68.62793%);stop-opacity:1;"
+         id="stop3266" />
+      <stop
+         offset="0.449219"
+         style="stop-color:rgb(68.235779%,68.235779%,68.235779%);stop-opacity:1;"
+         id="stop3268" />
+      <stop
+         offset="0.453125"
+         style="stop-color:rgb(67.843628%,67.843628%,67.843628%);stop-opacity:1;"
+         id="stop3270" />
+      <stop
+         offset="0.457031"
+         style="stop-color:rgb(67.451477%,67.451477%,67.451477%);stop-opacity:1;"
+         id="stop3272" />
+      <stop
+         offset="0.460938"
+         style="stop-color:rgb(67.059326%,67.059326%,67.059326%);stop-opacity:1;"
+         id="stop3274" />
+      <stop
+         offset="0.464844"
+         style="stop-color:rgb(66.667175%,66.667175%,66.667175%);stop-opacity:1;"
+         id="stop3276" />
+      <stop
+         offset="0.46875"
+         style="stop-color:rgb(66.667175%,66.667175%,66.667175%);stop-opacity:1;"
+         id="stop3278" />
+      <stop
+         offset="0.472656"
+         style="stop-color:rgb(66.275024%,66.275024%,66.275024%);stop-opacity:1;"
+         id="stop3280" />
+      <stop
+         offset="0.476563"
+         style="stop-color:rgb(65.882874%,65.882874%,65.882874%);stop-opacity:1;"
+         id="stop3282" />
+      <stop
+         offset="0.480469"
+         style="stop-color:rgb(65.882874%,65.882874%,65.882874%);stop-opacity:1;"
+         id="stop3284" />
+      <stop
+         offset="0.484375"
+         style="stop-color:rgb(65.490723%,65.490723%,65.490723%);stop-opacity:1;"
+         id="stop3286" />
+      <stop
+         offset="0.488281"
+         style="stop-color:rgb(65.098572%,65.098572%,65.098572%);stop-opacity:1;"
+         id="stop3288" />
+      <stop
+         offset="0.492188"
+         style="stop-color:rgb(64.706421%,64.706421%,64.706421%);stop-opacity:1;"
+         id="stop3290" />
+      <stop
+         offset="0.496094"
+         style="stop-color:rgb(64.31427%,64.31427%,64.31427%);stop-opacity:1;"
+         id="stop3292" />
+      <stop
+         offset="0.5"
+         style="stop-color:rgb(64.31427%,64.31427%,64.31427%);stop-opacity:1;"
+         id="stop3294" />
+      <stop
+         offset="0.503906"
+         style="stop-color:rgb(63.922119%,63.922119%,63.922119%);stop-opacity:1;"
+         id="stop3296" />
+      <stop
+         offset="0.507813"
+         style="stop-color:rgb(63.529968%,63.529968%,63.529968%);stop-opacity:1;"
+         id="stop3298" />
+      <stop
+         offset="0.511719"
+         style="stop-color:rgb(63.137817%,63.137817%,63.137817%);stop-opacity:1;"
+         id="stop3300" />
+      <stop
+         offset="0.515625"
+         style="stop-color:rgb(62.745667%,62.745667%,62.745667%);stop-opacity:1;"
+         id="stop3302" />
+      <stop
+         offset="0.519531"
+         style="stop-color:rgb(62.353516%,62.353516%,62.353516%);stop-opacity:1;"
+         id="stop3304" />
+      <stop
+         offset="0.523438"
+         style="stop-color:rgb(62.353516%,62.353516%,62.353516%);stop-opacity:1;"
+         id="stop3306" />
+      <stop
+         offset="0.527344"
+         style="stop-color:rgb(61.961365%,61.961365%,61.961365%);stop-opacity:1;"
+         id="stop3308" />
+      <stop
+         offset="0.53125"
+         style="stop-color:rgb(61.961365%,61.961365%,61.961365%);stop-opacity:1;"
+         id="stop3310" />
+      <stop
+         offset="0.535156"
+         style="stop-color:rgb(61.569214%,61.569214%,61.569214%);stop-opacity:1;"
+         id="stop3312" />
+      <stop
+         offset="0.539063"
+         style="stop-color:rgb(61.177063%,61.177063%,61.177063%);stop-opacity:1;"
+         id="stop3314" />
+      <stop
+         offset="0.542969"
+         style="stop-color:rgb(60.784912%,60.784912%,60.784912%);stop-opacity:1;"
+         id="stop3316" />
+      <stop
+         offset="0.546875"
+         style="stop-color:rgb(60.784912%,60.784912%,60.784912%);stop-opacity:1;"
+         id="stop3318" />
+      <stop
+         offset="0.550781"
+         style="stop-color:rgb(60.392761%,60.392761%,60.392761%);stop-opacity:1;"
+         id="stop3320" />
+      <stop
+         offset="0.554688"
+         style="stop-color:rgb(60.00061%,60.00061%,60.00061%);stop-opacity:1;"
+         id="stop3322" />
+      <stop
+         offset="0.558594"
+         style="stop-color:rgb(59.608459%,59.608459%,59.608459%);stop-opacity:1;"
+         id="stop3324" />
+      <stop
+         offset="0.5625"
+         style="stop-color:rgb(59.216309%,59.216309%,59.216309%);stop-opacity:1;"
+         id="stop3326" />
+      <stop
+         offset="0.566406"
+         style="stop-color:rgb(58.824158%,58.824158%,58.824158%);stop-opacity:1;"
+         id="stop3328" />
+      <stop
+         offset="0.570313"
+         style="stop-color:rgb(58.432007%,58.432007%,58.432007%);stop-opacity:1;"
+         id="stop3330" />
+      <stop
+         offset="0.574219"
+         style="stop-color:rgb(58.432007%,58.432007%,58.432007%);stop-opacity:1;"
+         id="stop3332" />
+      <stop
+         offset="0.578125"
+         style="stop-color:rgb(58.039856%,58.039856%,58.039856%);stop-opacity:1;"
+         id="stop3334" />
+      <stop
+         offset="0.582031"
+         style="stop-color:rgb(57.647705%,57.647705%,57.647705%);stop-opacity:1;"
+         id="stop3336" />
+      <stop
+         offset="0.585938"
+         style="stop-color:rgb(57.255554%,57.255554%,57.255554%);stop-opacity:1;"
+         id="stop3338" />
+      <stop
+         offset="0.589844"
+         style="stop-color:rgb(56.863403%,56.863403%,56.863403%);stop-opacity:1;"
+         id="stop3340" />
+      <stop
+         offset="0.59375"
+         style="stop-color:rgb(56.863403%,56.471252%,56.863403%);stop-opacity:1;"
+         id="stop3342" />
+      <stop
+         offset="0.597656"
+         style="stop-color:rgb(56.863403%,56.471252%,56.863403%);stop-opacity:1;"
+         id="stop3344" />
+      <stop
+         offset="0.601563"
+         style="stop-color:rgb(56.471252%,56.471252%,56.471252%);stop-opacity:1;"
+         id="stop3346" />
+      <stop
+         offset="0.605469"
+         style="stop-color:rgb(56.079102%,56.079102%,56.079102%);stop-opacity:1;"
+         id="stop3348" />
+      <stop
+         offset="0.609375"
+         style="stop-color:rgb(55.686951%,55.686951%,55.686951%);stop-opacity:1;"
+         id="stop3350" />
+      <stop
+         offset="0.613281"
+         style="stop-color:rgb(55.2948%,55.2948%,55.2948%);stop-opacity:1;"
+         id="stop3352" />
+      <stop
+         offset="0.617188"
+         style="stop-color:rgb(54.902649%,54.902649%,54.902649%);stop-opacity:1;"
+         id="stop3354" />
+      <stop
+         offset="0.621094"
+         style="stop-color:rgb(54.510498%,54.510498%,54.510498%);stop-opacity:1;"
+         id="stop3356" />
+      <stop
+         offset="0.625"
+         style="stop-color:rgb(54.510498%,54.510498%,54.510498%);stop-opacity:1;"
+         id="stop3358" />
+      <stop
+         offset="0.628906"
+         style="stop-color:rgb(54.118347%,54.118347%,54.118347%);stop-opacity:1;"
+         id="stop3360" />
+      <stop
+         offset="0.632812"
+         style="stop-color:rgb(53.726196%,53.726196%,53.726196%);stop-opacity:1;"
+         id="stop3362" />
+      <stop
+         offset="0.636719"
+         style="stop-color:rgb(53.334045%,53.334045%,53.334045%);stop-opacity:1;"
+         id="stop3364" />
+      <stop
+         offset="0.640625"
+         style="stop-color:rgb(52.941895%,52.941895%,52.941895%);stop-opacity:1;"
+         id="stop3366" />
+      <stop
+         offset="0.644531"
+         style="stop-color:rgb(52.549744%,52.549744%,52.549744%);stop-opacity:1;"
+         id="stop3368" />
+      <stop
+         offset="0.648437"
+         style="stop-color:rgb(52.549744%,52.549744%,52.549744%);stop-opacity:1;"
+         id="stop3370" />
+      <stop
+         offset="0.652344"
+         style="stop-color:rgb(52.157593%,52.157593%,52.157593%);stop-opacity:1;"
+         id="stop3372" />
+      <stop
+         offset="0.65625"
+         style="stop-color:rgb(51.765442%,51.765442%,51.765442%);stop-opacity:1;"
+         id="stop3374" />
+      <stop
+         offset="0.660156"
+         style="stop-color:rgb(51.373291%,51.373291%,51.373291%);stop-opacity:1;"
+         id="stop3376" />
+      <stop
+         offset="0.664062"
+         style="stop-color:rgb(50.98114%,50.98114%,50.98114%);stop-opacity:1;"
+         id="stop3378" />
+      <stop
+         offset="0.667969"
+         style="stop-color:rgb(50.588989%,50.588989%,50.588989%);stop-opacity:1;"
+         id="stop3380" />
+      <stop
+         offset="0.671875"
+         style="stop-color:rgb(50.588989%,50.588989%,50.588989%);stop-opacity:1;"
+         id="stop3382" />
+      <stop
+         offset="0.675781"
+         style="stop-color:rgb(50.196838%,50.196838%,50.196838%);stop-opacity:1;"
+         id="stop3384" />
+      <stop
+         offset="0.679687"
+         style="stop-color:rgb(49.803162%,49.803162%,49.803162%);stop-opacity:1;"
+         id="stop3386" />
+      <stop
+         offset="0.683594"
+         style="stop-color:rgb(49.411011%,49.411011%,49.411011%);stop-opacity:1;"
+         id="stop3388" />
+      <stop
+         offset="0.6875"
+         style="stop-color:rgb(49.01886%,49.01886%,49.01886%);stop-opacity:1;"
+         id="stop3390" />
+      <stop
+         offset="0.691406"
+         style="stop-color:rgb(48.626709%,48.626709%,48.626709%);stop-opacity:1;"
+         id="stop3392" />
+      <stop
+         offset="0.695312"
+         style="stop-color:rgb(48.234558%,48.234558%,48.234558%);stop-opacity:1;"
+         id="stop3394" />
+      <stop
+         offset="0.699219"
+         style="stop-color:rgb(47.842407%,47.842407%,47.842407%);stop-opacity:1;"
+         id="stop3396" />
+      <stop
+         offset="0.703125"
+         style="stop-color:rgb(47.842407%,47.842407%,47.842407%);stop-opacity:1;"
+         id="stop3398" />
+      <stop
+         offset="0.707031"
+         style="stop-color:rgb(47.450256%,47.450256%,47.450256%);stop-opacity:1;"
+         id="stop3400" />
+      <stop
+         offset="0.710938"
+         style="stop-color:rgb(47.058105%,47.058105%,47.058105%);stop-opacity:1;"
+         id="stop3402" />
+      <stop
+         offset="0.714844"
+         style="stop-color:rgb(46.665955%,46.665955%,46.665955%);stop-opacity:1;"
+         id="stop3404" />
+      <stop
+         offset="0.71875"
+         style="stop-color:rgb(46.273804%,46.273804%,46.273804%);stop-opacity:1;"
+         id="stop3406" />
+      <stop
+         offset="0.722656"
+         style="stop-color:rgb(45.881653%,45.881653%,45.881653%);stop-opacity:1;"
+         id="stop3408" />
+      <stop
+         offset="0.726563"
+         style="stop-color:rgb(45.881653%,45.881653%,45.881653%);stop-opacity:1;"
+         id="stop3410" />
+      <stop
+         offset="0.730469"
+         style="stop-color:rgb(45.489502%,45.489502%,45.489502%);stop-opacity:1;"
+         id="stop3412" />
+      <stop
+         offset="0.734375"
+         style="stop-color:rgb(45.097351%,45.097351%,45.097351%);stop-opacity:1;"
+         id="stop3414" />
+      <stop
+         offset="0.738281"
+         style="stop-color:rgb(44.7052%,44.7052%,44.7052%);stop-opacity:1;"
+         id="stop3416" />
+      <stop
+         offset="0.742188"
+         style="stop-color:rgb(44.313049%,44.313049%,44.313049%);stop-opacity:1;"
+         id="stop3418" />
+      <stop
+         offset="0.746094"
+         style="stop-color:rgb(43.920898%,43.920898%,43.920898%);stop-opacity:1;"
+         id="stop3420" />
+      <stop
+         offset="0.75"
+         style="stop-color:rgb(43.920898%,43.920898%,43.920898%);stop-opacity:1;"
+         id="stop3422" />
+      <stop
+         offset="0.753906"
+         style="stop-color:rgb(43.528748%,43.528748%,43.528748%);stop-opacity:1;"
+         id="stop3424" />
+      <stop
+         offset="0.757813"
+         style="stop-color:rgb(43.136597%,43.136597%,43.136597%);stop-opacity:1;"
+         id="stop3426" />
+      <stop
+         offset="0.761719"
+         style="stop-color:rgb(42.744446%,42.744446%,42.744446%);stop-opacity:1;"
+         id="stop3428" />
+      <stop
+         offset="0.765625"
+         style="stop-color:rgb(42.352295%,42.352295%,42.352295%);stop-opacity:1;"
+         id="stop3430" />
+      <stop
+         offset="0.769531"
+         style="stop-color:rgb(41.960144%,41.960144%,41.960144%);stop-opacity:1;"
+         id="stop3432" />
+      <stop
+         offset="0.773438"
+         style="stop-color:rgb(41.567993%,41.567993%,41.567993%);stop-opacity:1;"
+         id="stop3434" />
+      <stop
+         offset="0.777344"
+         style="stop-color:rgb(41.567993%,41.567993%,41.567993%);stop-opacity:1;"
+         id="stop3436" />
+      <stop
+         offset="0.78125"
+         style="stop-color:rgb(41.175842%,41.175842%,41.175842%);stop-opacity:1;"
+         id="stop3438" />
+      <stop
+         offset="0.785156"
+         style="stop-color:rgb(40.783691%,40.783691%,40.783691%);stop-opacity:1;"
+         id="stop3440" />
+      <stop
+         offset="0.789063"
+         style="stop-color:rgb(40.391541%,40.391541%,40.391541%);stop-opacity:1;"
+         id="stop3442" />
+      <stop
+         offset="0.792969"
+         style="stop-color:rgb(39.99939%,39.99939%,39.99939%);stop-opacity:1;"
+         id="stop3444" />
+      <stop
+         offset="0.796875"
+         style="stop-color:rgb(39.607239%,39.607239%,39.607239%);stop-opacity:1;"
+         id="stop3446" />
+      <stop
+         offset="0.800781"
+         style="stop-color:rgb(39.607239%,39.607239%,39.607239%);stop-opacity:1;"
+         id="stop3448" />
+      <stop
+         offset="0.804688"
+         style="stop-color:rgb(39.215088%,39.215088%,39.215088%);stop-opacity:1;"
+         id="stop3450" />
+      <stop
+         offset="0.808594"
+         style="stop-color:rgb(38.822937%,38.822937%,38.822937%);stop-opacity:1;"
+         id="stop3452" />
+      <stop
+         offset="0.8125"
+         style="stop-color:rgb(38.430786%,38.430786%,38.430786%);stop-opacity:1;"
+         id="stop3454" />
+      <stop
+         offset="0.816406"
+         style="stop-color:rgb(38.038635%,38.038635%,38.038635%);stop-opacity:1;"
+         id="stop3456" />
+      <stop
+         offset="0.820313"
+         style="stop-color:rgb(37.646484%,37.646484%,37.646484%);stop-opacity:1;"
+         id="stop3458" />
+      <stop
+         offset="0.824219"
+         style="stop-color:rgb(36.862183%,36.862183%,36.862183%);stop-opacity:1;"
+         id="stop3460" />
+      <stop
+         offset="0.828125"
+         style="stop-color:rgb(36.862183%,36.862183%,36.862183%);stop-opacity:1;"
+         id="stop3462" />
+      <stop
+         offset="0.832031"
+         style="stop-color:rgb(36.470032%,36.470032%,36.470032%);stop-opacity:1;"
+         id="stop3464" />
+      <stop
+         offset="0.835938"
+         style="stop-color:rgb(36.077881%,36.077881%,36.077881%);stop-opacity:1;"
+         id="stop3466" />
+      <stop
+         offset="0.839844"
+         style="stop-color:rgb(35.68573%,35.68573%,35.68573%);stop-opacity:1;"
+         id="stop3468" />
+      <stop
+         offset="0.84375"
+         style="stop-color:rgb(35.293579%,35.293579%,35.293579%);stop-opacity:1;"
+         id="stop3470" />
+      <stop
+         offset="0.847656"
+         style="stop-color:rgb(34.901428%,34.901428%,34.901428%);stop-opacity:1;"
+         id="stop3472" />
+      <stop
+         offset="0.851563"
+         style="stop-color:rgb(34.509277%,34.509277%,34.509277%);stop-opacity:1;"
+         id="stop3474" />
+      <stop
+         offset="0.855469"
+         style="stop-color:rgb(34.509277%,34.509277%,34.509277%);stop-opacity:1;"
+         id="stop3476" />
+      <stop
+         offset="0.859375"
+         style="stop-color:rgb(34.117126%,34.117126%,34.117126%);stop-opacity:1;"
+         id="stop3478" />
+      <stop
+         offset="0.863281"
+         style="stop-color:rgb(33.724976%,33.724976%,33.724976%);stop-opacity:1;"
+         id="stop3480" />
+      <stop
+         offset="0.867188"
+         style="stop-color:rgb(33.332825%,33.332825%,33.332825%);stop-opacity:1;"
+         id="stop3482" />
+      <stop
+         offset="0.871094"
+         style="stop-color:rgb(32.940674%,32.940674%,32.940674%);stop-opacity:1;"
+         id="stop3484" />
+      <stop
+         offset="0.875"
+         style="stop-color:rgb(32.156372%,32.156372%,32.156372%);stop-opacity:1;"
+         id="stop3486" />
+      <stop
+         offset="0.878906"
+         style="stop-color:rgb(32.156372%,32.156372%,32.156372%);stop-opacity:1;"
+         id="stop3488" />
+      <stop
+         offset="0.882813"
+         style="stop-color:rgb(31.764221%,31.764221%,31.764221%);stop-opacity:1;"
+         id="stop3490" />
+      <stop
+         offset="0.886719"
+         style="stop-color:rgb(31.37207%,31.37207%,31.37207%);stop-opacity:1;"
+         id="stop3492" />
+      <stop
+         offset="0.890625"
+         style="stop-color:rgb(30.979919%,30.979919%,30.979919%);stop-opacity:1;"
+         id="stop3494" />
+      <stop
+         offset="0.894531"
+         style="stop-color:rgb(30.587769%,30.587769%,30.587769%);stop-opacity:1;"
+         id="stop3496" />
+      <stop
+         offset="0.898438"
+         style="stop-color:rgb(30.195618%,30.195618%,30.195618%);stop-opacity:1;"
+         id="stop3498" />
+      <stop
+         offset="0.902344"
+         style="stop-color:rgb(29.803467%,29.803467%,29.803467%);stop-opacity:1;"
+         id="stop3500" />
+      <stop
+         offset="0.90625"
+         style="stop-color:rgb(29.803467%,29.803467%,29.803467%);stop-opacity:1;"
+         id="stop3502" />
+      <stop
+         offset="0.910156"
+         style="stop-color:rgb(29.411316%,29.411316%,29.411316%);stop-opacity:1;"
+         id="stop3504" />
+      <stop
+         offset="0.914063"
+         style="stop-color:rgb(28.627014%,28.627014%,28.627014%);stop-opacity:1;"
+         id="stop3506" />
+      <stop
+         offset="0.917969"
+         style="stop-color:rgb(28.234863%,28.234863%,28.234863%);stop-opacity:1;"
+         id="stop3508" />
+      <stop
+         offset="0.921875"
+         style="stop-color:rgb(27.842712%,27.842712%,27.842712%);stop-opacity:1;"
+         id="stop3510" />
+      <stop
+         offset="0.925781"
+         style="stop-color:rgb(27.450562%,27.450562%,27.450562%);stop-opacity:1;"
+         id="stop3512" />
+      <stop
+         offset="0.929688"
+         style="stop-color:rgb(27.450562%,27.450562%,27.450562%);stop-opacity:1;"
+         id="stop3514" />
+      <stop
+         offset="0.933594"
+         style="stop-color:rgb(27.058411%,27.058411%,27.058411%);stop-opacity:1;"
+         id="stop3516" />
+      <stop
+         offset="0.9375"
+         style="stop-color:rgb(26.66626%,26.66626%,26.66626%);stop-opacity:1;"
+         id="stop3518" />
+      <stop
+         offset="0.941406"
+         style="stop-color:rgb(25.881958%,25.881958%,25.881958%);stop-opacity:1;"
+         id="stop3520" />
+      <stop
+         offset="0.945313"
+         style="stop-color:rgb(25.489807%,25.489807%,25.489807%);stop-opacity:1;"
+         id="stop3522" />
+      <stop
+         offset="0.949219"
+         style="stop-color:rgb(25.097656%,25.097656%,25.097656%);stop-opacity:1;"
+         id="stop3524" />
+      <stop
+         offset="0.953125"
+         style="stop-color:rgb(25.097656%,25.097656%,25.097656%);stop-opacity:1;"
+         id="stop3526" />
+      <stop
+         offset="0.957031"
+         style="stop-color:rgb(24.705505%,24.705505%,24.705505%);stop-opacity:1;"
+         id="stop3528" />
+      <stop
+         offset="0.960938"
+         style="stop-color:rgb(24.313354%,24.313354%,24.313354%);stop-opacity:1;"
+         id="stop3530" />
+      <stop
+         offset="0.964844"
+         style="stop-color:rgb(23.529053%,23.529053%,23.529053%);stop-opacity:1;"
+         id="stop3532" />
+      <stop
+         offset="0.96875"
+         style="stop-color:rgb(23.136902%,23.136902%,23.136902%);stop-opacity:1;"
+         id="stop3534" />
+      <stop
+         offset="0.972656"
+         style="stop-color:rgb(22.744751%,22.744751%,22.744751%);stop-opacity:1;"
+         id="stop3536" />
+      <stop
+         offset="0.976563"
+         style="stop-color:rgb(22.3526%,22.3526%,22.3526%);stop-opacity:1;"
+         id="stop3538" />
+      <stop
+         offset="0.980469"
+         style="stop-color:rgb(21.568298%,21.568298%,21.568298%);stop-opacity:1;"
+         id="stop3540" />
+      <stop
+         offset="0.984375"
+         style="stop-color:rgb(21.568298%,21.568298%,21.568298%);stop-opacity:1;"
+         id="stop3542" />
+      <stop
+         offset="0.988281"
+         style="stop-color:rgb(21.176147%,21.176147%,21.176147%);stop-opacity:1;"
+         id="stop3544" />
+      <stop
+         offset="0.992188"
+         style="stop-color:rgb(20.783997%,20.783997%,20.783997%);stop-opacity:1;"
+         id="stop3546" />
+      <stop
+         offset="0.996094"
+         style="stop-color:rgb(20.391846%,20.391846%,20.391846%);stop-opacity:1;"
+         id="stop3548" />
+      <stop
+         offset="1"
+         style="stop-color:rgb(19.607544%,19.607544%,19.607544%);stop-opacity:1;"
+         id="stop3550" />
+    </linearGradient>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-7-6-43-8-33-7-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-6-9-0-0-9-4-2"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="TriangleOutM-77-9-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path9080-2-0-1"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8"
+     inkscape:cx="89.0625"
+     inkscape:cy="76.4375"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     inkscape:window-width="2400"
+     inkscape:window-height="1271"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3245"
+       spacingx="0.066145833"
+       spacingy="0.066145833" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata52547">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="display:inline;fill:#a4e0d2;fill-opacity:1;stroke:#a4e0d2;stroke-width:1.01341;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5119-7-8-6-1"
+       width="30.148876"
+       height="20.814714"
+       x="9.110693"
+       y="6.8567047"
+       rx="0.53689665"
+       ry="0.53689665"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <circle
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.119801;stroke-opacity:1"
+       id="path7673-0-6-7"
+       cx="10.376626"
+       cy="24.374741"
+       r="0.22236912"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <circle
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.119801;stroke-opacity:1"
+       id="path7673-0-6-7-5"
+       cx="23.68848"
+       cy="24.341667"
+       r="0.22236912"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-5)"
+       d="M 9.7895829,10.871942 H 10.937817"
+       id="path7762-52"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <g
+       id="g4075-5"
+       transform="matrix(0.12778763,0,0,0.12778763,6.0458077,-106.825)"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500">
+      <circle
+         style="fill:#fff500;fill-opacity:1;stroke:#000000;stroke-width:1.04433;stroke-opacity:1"
+         r="9.0460281"
+         cy="963.23193"
+         cx="237.95935"
+         id="path7764-5-3" />
+      <text
+         id="text8933-5-3"
+         y="968.81976"
+         x="230.77745"
+         style="font-style:normal;font-weight:normal;font-size:17.5519px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.438799"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.438799"
+           y="968.81976"
+           x="230.77745"
+           id="tspan8931-4-43"
+           sodipodi:role="line">×</tspan></text>
+    </g>
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-7-2)"
+       d="M 25.815228,13.63604 V 12.417993"
+       id="path7762-5-65"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-7-6-6)"
+       d="M 12.376523,17.46659 V 12.413906"
+       id="path7762-5-3-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-7-6-4-3)"
+       d="M 13.38371,10.871942 H 24.253898"
+       id="path7762-5-3-4-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 26.853884,10.871942 H 37.636981"
+       id="path7762-5-3-7-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <circle
+       r="1.1559706"
+       style="fill:#fff500;fill-opacity:1;stroke:#000000;stroke-width:0.133452;stroke-opacity:1"
+       cy="13.114783"
+       cx="36.45406"
+       id="path7764-5-8-2"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       id="text7758-3"
+       y="13.340496"
+       x="35.629627"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.119801"
+         y="13.340496"
+         x="35.629627"
+         id="tspan7756-9"
+         sodipodi:role="line">σ<tspan
+   id="tspan7760-7"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';baseline-shift:sub;stroke-width:0.119801">h</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       x="32.804581"
+       y="27.68037"
+       id="text13319-9"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan13317-8"
+         x="32.804581"
+         y="27.68037"
+         style="stroke-width:0.119801"><tspan
+           style="font-style:italic;stroke-width:0.119801"
+           id="tspan3022-5">h</tspan><tspan
+           style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801"
+           id="tspan13325-2">t</tspan><tspan
+           style="font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801"
+           id="tspan13327-96">-1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       x="26.249949"
+       y="7.5793724"
+       id="text13319-6-9"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan13317-0-8"
+         x="26.249949"
+         y="7.5793724"
+         style="stroke-width:0.119801"><tspan
+           style="font-style:italic;stroke-width:0.119801"
+           id="tspan3024-6">c</tspan><tspan
+           style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801"
+           id="tspan13325-0-0">t</tspan><tspan
+           style="font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801"
+           id="tspan13327-9-2">-1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       x="6.4822917"
+       y="16.933334"
+       id="text13359-2"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan13357-2"
+         x="6.4822917"
+         y="16.933334"
+         style="stroke-width:0.119801"><tspan
+           style="font-style:italic;stroke-width:0.119801"
+           id="tspan27134-4">x</tspan><tspan
+           style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801"
+           id="tspan13361-9">t</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       x="37.801849"
+       y="17.990759"
+       id="text13319-0-4"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan13317-9-3"
+         x="37.801849"
+         y="17.990759"
+         style="stroke-width:0.119801"><tspan
+           style="font-style:italic;stroke-width:0.119801"
+           id="tspan3026-0">h</tspan><tspan
+           style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801"
+           id="tspan13325-1-1">t</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       x="45.072353"
+       y="17.196276"
+       id="text13319-0-4-7"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan13317-9-3-5"
+         x="45.072353"
+         y="17.196276"
+         style="stroke-width:0.119801"><tspan
+           style="font-style:italic;stroke-width:0.119801"
+           id="tspan3026-0-8">y</tspan><tspan
+           style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801"
+           id="tspan13325-1-1-5">t</tspan></tspan></text>
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-77-9)"
+       d="M 32.711556,26.19375 V 22.775327"
+       id="path7762-3-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-77-9-5)"
+       d="m 43.681823,18.214808 h 2.298632"
+       id="path7762-3-7-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-77-0-5)"
+       d="M 30.493231,24.367763 V 22.754167"
+       id="path7762-3-9-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-77-0-0-4)"
+       d="M 17.065627,24.353397 V 22.742439"
+       id="path7762-3-9-0-85"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-77-0-8-9)"
+       d="m 23.678699,24.342378 v -1.58892"
+       id="path7762-3-9-4-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-77-7-5)"
+       d="M 25.979583,26.19375 V 22.76113"
+       id="path7762-3-5-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-77-3-6)"
+       d="M 19.216797,26.19375 V 22.755826"
+       id="path7762-3-6-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-77-8-0)"
+       d="M 12.475141,26.193749 V 22.754166"
+       id="path7762-3-3-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <circle
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.119801;stroke-opacity:1"
+       id="path7673-0-6"
+       cx="19.22253"
+       cy="26.139977"
+       r="0.22236912"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <circle
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.119801;stroke-opacity:1"
+       id="path7673-0-6-5"
+       cx="17.057354"
+       cy="24.391275"
+       r="0.22236912"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <circle
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.119801;stroke-opacity:1"
+       id="path7673-0-6-3"
+       cx="25.985334"
+       cy="26.166882"
+       r="0.22236912"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <circle
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.119801;stroke-opacity:1"
+       id="path7673-0-6-3-2"
+       cx="32.716908"
+       cy="26.160372"
+       r="0.22236912"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-77-8-3-1)"
+       d="M 10.373972,24.341667 V 22.732802"
+       id="path7762-3-3-8-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       style="fill:#a4e0d2;fill-opacity:1;stroke:none;stroke-width:0.119801;stroke-opacity:1"
+       id="rect9949-6-3-4"
+       width="0.33072904"
+       height="0.26458442"
+       x="12.303123"
+       y="24.209375"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       style="fill:#a4e0d2;fill-opacity:1;stroke:none;stroke-width:0.119801;stroke-opacity:1"
+       id="rect9949-6-3-4-0"
+       width="0.33072904"
+       height="0.26458442"
+       x="19.083076"
+       y="24.209375"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       style="fill:#a4e0d2;fill-opacity:1;stroke:none;stroke-width:0.119801;stroke-opacity:1"
+       id="rect9949-6-3-4-0-0"
+       width="0.33072904"
+       height="0.26458442"
+       x="25.829952"
+       y="24.209375"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 30.559375,24.347913 H 7.805208 v -6.752199"
+       id="path5152-5-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 36.524525,26.13385 H 12.435418"
+       id="path5152-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 36.557694,26.197999 -0.01212,-7.987338"
+       id="path5152-7-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 7.8713541,17.594791 H 5.5844007"
+       id="path5152-7-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-7-6-43-8-6)"
+       d="m 32.387967,17.534334 v -1.273225 h 2.510188"
+       id="path7762-5-3-7-1-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-7-7-4)"
+       d="M 25.815228,17.43484 V 16.201819"
+       id="path7762-5-0-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-7-6-43-8-3-8)"
+       d="m 19.157738,17.487342 v -2.826015 h 5.090163"
+       id="path7762-5-3-7-1-9-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <circle
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.119801;stroke-opacity:1"
+       id="path7673-0-4-2"
+       cx="36.462154"
+       cy="10.859252"
+       r="0.22236912"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-7-8-3)"
+       d="m 36.454071,14.302972 v 0.402963"
+       id="path7762-5-6-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       x="11.149693"
+       y="16.846405"
+       id="text19443-5"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan19441-3"
+         x="11.149693"
+         y="16.846405"
+         style="font-style:italic;stroke-width:0.119801">f<tspan
+   style="font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801"
+   id="tspan19445-5">t</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       x="17.965069"
+       y="16.856876"
+       id="text19443-9-4"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan19441-9-8"
+         x="17.965069"
+         y="16.856876"
+         style="font-style:italic;stroke-width:0.119801">i<tspan
+   style="font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801"
+   id="tspan19445-1-8">t</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       x="24.198874"
+       y="16.846405"
+       id="text19443-94-9"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan19441-2-8"
+         x="24.198874"
+         y="16.846405"
+         style="font-style:italic;stroke-width:0.119801">c<tspan
+   style="font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801"
+   id="tspan19445-0-2">t</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       x="30.882246"
+       y="16.856876"
+       id="text19443-6-5"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan19441-5-7"
+         x="30.882246"
+         y="16.856876"
+         style="font-style:italic;stroke-width:0.119801">o<tspan
+   style="font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801"
+   id="tspan19445-9-1">t</tspan></tspan></text>
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-7-8-7-3)"
+       d="m 36.454071,10.867307 v 0.683756"
+       id="path7762-5-6-7-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM-7-6-43-8-33-7)"
+       d="m 36.543171,17.503573 0.0024,0.729856 4.199755,-0.0034"
+       id="path7762-5-3-7-1-2-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       x="24.146011"
+       y="16.390905"
+       id="text26413-0"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan26411-1"
+         x="24.146011"
+         y="16.390905"
+         style="stroke-width:0.119801">~</tspan></text>
+    <g
+       id="g4512-1"
+       transform="matrix(0.12778763,0,0,0.12778763,6.0458077,-107.06462)"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500">
+      <circle
+         style="fill:#fff500;fill-opacity:1;stroke:#000000;stroke-width:1.04433;stroke-opacity:1"
+         r="9.0460281"
+         cy="952.41406"
+         cx="154.70526"
+         id="path7764-2-9" />
+      <text
+         id="text8933-0-4"
+         y="958.00189"
+         x="147.52336"
+         style="font-style:normal;font-weight:normal;font-size:17.5519px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.438799"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.438799"
+           y="958.00189"
+           x="147.52336"
+           id="tspan8931-6-9"
+           sodipodi:role="line">×</tspan></text>
+    </g>
+    <g
+       id="g4517-8"
+       transform="matrix(0.12778763,0,0,0.12778763,6.0456787,-107.04621)"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500">
+      <circle
+         style="fill:#fff500;fill-opacity:1;stroke:#000000;stroke-width:1.04433;stroke-opacity:1"
+         r="9.0460281"
+         cy="922.7666"
+         cx="154.70607"
+         id="path7764-4-9" />
+      <text
+         id="text7754-4"
+         y="928.4679"
+         x="147.37831"
+         style="font-style:normal;font-weight:normal;font-size:17.9084px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.44771"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.44771"
+           y="928.4679"
+           x="147.37831"
+           id="tspan7752-4"
+           sodipodi:role="line">+</tspan></text>
+    </g>
+    <g
+       id="g5128-6"
+       transform="matrix(0.12778763,0,0,0.12778763,6.0233427,-107.04643)"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500">
+      <circle
+         style="fill:#fff500;fill-opacity:1;stroke:#000000;stroke-width:1.04433;stroke-opacity:1"
+         r="9.0460281"
+         cy="922.76831"
+         cx="49.716568"
+         id="path7764-9" />
+      <text
+         id="text8933-3"
+         y="928.35614"
+         x="42.534668"
+         style="font-style:normal;font-weight:normal;font-size:17.5519px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.438799"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.438799"
+           y="928.35614"
+           x="42.534668"
+           id="tspan8931-8"
+           sodipodi:role="line">×</tspan></text>
+    </g>
+    <rect
+       y="17.526131"
+       x="9.2547789"
+       height="4.8109426"
+       width="6.1752386"
+       id="rect13190-5-67-9-8"
+       style="display:inline;fill:#ff9955;fill-opacity:1;stroke:#000000;stroke-width:0.1978;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       y="24.812483"
+       x="34.817207"
+       height="2.3554039"
+       width="3.1350477"
+       id="rect13190-5-67-9-8-7"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.12;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.12;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 37.570835,10.847917 V 8.4666666 H 9.7895829 v 2.4473964 0 0"
+       id="path3535" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3076-86"
+       d="M 9.2883239,19.931574 H 15.382294"
+       style="fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3078-0"
+       d="m 11.580707,19.923655 v 2.435462"
+       style="fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       id="text7758-8-9-1-24"
+       y="18.816385"
+       x="11.148582"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.119801"
+         y="18.816385"
+         x="11.148582"
+         id="tspan7756-6-1-2-13"
+         sodipodi:role="line">σ<tspan
+   id="tspan13140-3-7-1"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';baseline-shift:sub;stroke-width:0.119801">g</tspan></tspan></text>
+    <text
+       id="text3116-5-47"
+       y="21.375952"
+       x="9.4168587"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="21.375952"
+         x="9.4168587"
+         id="tspan3114-8-2"
+         sodipodi:role="line">W<tspan
+   id="tspan3118-9-7"
+   style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801">f</tspan></tspan></text>
+    <text
+       id="text3116-7-0-6"
+       y="21.375952"
+       x="11.739061"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="21.375952"
+         x="11.739061"
+         id="tspan3114-4-2-699"
+         sodipodi:role="line">U<tspan
+   id="tspan3118-8-4-5"
+   style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801">f</tspan></tspan></text>
+    <rect
+       y="7.3174076"
+       x="28.558802"
+       height="2.3554039"
+       width="3.1350477"
+       id="rect13190-5-67-9-8-7-8"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.12;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3078-3-1"
+       d="m 13.548783,19.896771 v 2.435474"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       xml:space="preserve"
+       style="font-size:1.23472px;line-height:1.25;font-family:serif;-inkscape-font-specification:'serif, Normal';stroke-width:0.264583"
+       x="28.772539"
+       y="8.7905226"
+       id="text4754-1"><tspan
+         sodipodi:role="line"
+         id="tspan4752-5"
+         style="font-size:1.23472px;stroke-width:0.264583"
+         x="28.772539"
+         y="8.7905226">delay</tspan></text>
+    <text
+       id="text3116-7-0-85-7"
+       y="21.375952"
+       x="13.689214"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="21.375952"
+         x="13.689214"
+         id="tspan3114-4-2-69-6"
+         sodipodi:role="line">B<tspan
+   id="tspan3118-8-4-98-69"
+   style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801">f</tspan></tspan></text>
+    <rect
+       y="17.526131"
+       x="15.962041"
+       height="4.8109426"
+       width="6.1752386"
+       id="rect13190-5-67-9-0-5"
+       style="display:inline;fill:#ff9955;fill-opacity:1;stroke:#000000;stroke-width:0.1978;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3076-71-6"
+       d="m 15.995593,19.931574 h 6.093968"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3078-5-4"
+       d="m 18.287974,19.923642 v 2.435475"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       id="text7758-8-9-1-2-5"
+       y="18.816385"
+       x="17.855854"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.119801"
+         y="18.816385"
+         x="17.855854"
+         id="tspan7756-6-1-2-3-7"
+         sodipodi:role="line">σ<tspan
+   id="tspan13140-3-7-3-6"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';baseline-shift:sub;stroke-width:0.119801">g</tspan></tspan></text>
+    <text
+       id="text3116-5-1-7"
+       y="21.375875"
+       x="16.124125"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="21.375875"
+         x="16.124125"
+         id="tspan3114-8-6-4"
+         sodipodi:role="line">W<tspan
+   id="tspan3118-9-22-6"
+   style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801">i</tspan></tspan></text>
+    <text
+       id="text3116-7-0-1-7"
+       y="21.375875"
+       x="18.446337"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="21.375875"
+         x="18.446337"
+         id="tspan3114-4-2-0-2"
+         sodipodi:role="line">U<tspan
+   id="tspan3118-8-4-97-9"
+   style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801">i</tspan></tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path3078-3-8-2"
+       d="m 20.256062,19.896771 v 2.435474"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       id="text3116-7-0-85-6-6"
+       y="21.375875"
+       x="20.396492"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="21.375875"
+         x="20.396492"
+         id="tspan3114-4-2-69-0-8"
+         sodipodi:role="line">B<tspan
+   id="tspan3118-8-4-98-1-7"
+   style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801">i</tspan></tspan></text>
+    <rect
+       y="17.526131"
+       x="22.669323"
+       height="4.8109426"
+       width="6.1752386"
+       id="rect13190-5-67-9-03-3"
+       style="display:inline;fill:#ff9955;fill-opacity:1;stroke:#000000;stroke-width:0.1978;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3076-1-2"
+       d="m 22.70286,19.931574 h 6.093968"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3078-9-2"
+       d="m 24.995241,19.923642 v 2.435475"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       id="text7758-8-9-1-20-1"
+       y="18.816385"
+       x="24.563128"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.119801"
+         y="18.816385"
+         x="24.563128"
+         id="tspan7756-6-1-2-8-4"
+         sodipodi:role="line">σ<tspan
+   id="tspan13140-3-7-4-1"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';baseline-shift:sub;stroke-width:0.119801">h</tspan></tspan></text>
+    <text
+       id="text3116-5-4-4"
+       y="21.375875"
+       x="22.831404"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="21.375875"
+         x="22.831404"
+         id="tspan3114-8-8-4"
+         sodipodi:role="line">W<tspan
+   id="tspan3118-9-25-6"
+   style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801">c</tspan></tspan></text>
+    <text
+       id="text3116-7-0-3-7"
+       y="21.375875"
+       x="25.153608"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="21.375875"
+         x="25.153608"
+         id="tspan3114-4-2-9-6"
+         sodipodi:role="line">U<tspan
+   id="tspan3118-8-4-6-1"
+   style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801">c</tspan></tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path3078-3-9-1"
+       d="m 26.963329,19.896771 v 2.435474"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       id="text3116-7-0-85-3-6"
+       y="21.375875"
+       x="27.103765"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="21.375875"
+         x="27.103765"
+         id="tspan3114-4-2-69-7-4"
+         sodipodi:role="line">B<tspan
+   id="tspan3118-8-4-98-6-6"
+   style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801">c</tspan></tspan></text>
+    <rect
+       y="17.526131"
+       x="29.3766"
+       height="4.8109426"
+       width="6.1752386"
+       id="rect13190-5-67-9-032-6"
+       style="display:inline;fill:#ff9955;fill-opacity:1;stroke:#000000;stroke-width:0.1978;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       y="17.07832"
+       x="41.148144"
+       height="2.3635468"
+       width="2.5139744"
+       id="rect13190-5-67-9-032-6-3"
+       style="display:inline;fill:#ff9955;fill-opacity:1;stroke:#000000;stroke-width:0.12;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3076-4-4"
+       d="m 29.410139,19.931574 h 6.093968"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3078-7-2"
+       d="m 31.70252,19.923655 v 2.435462"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.119801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       id="text7758-8-9-1-0-2"
+       y="18.816385"
+       x="31.270403"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.119801"
+         y="18.816385"
+         x="31.270403"
+         id="tspan7756-6-1-2-39-4"
+         sodipodi:role="line">σ<tspan
+   id="tspan13140-3-7-43-6"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif';baseline-shift:sub;stroke-width:0.119801">g</tspan></tspan></text>
+    <text
+       id="text3116-5-7-5"
+       y="21.375952"
+       x="29.538679"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="21.375952"
+         x="29.538679"
+         id="tspan3114-8-49-5"
+         sodipodi:role="line">W<tspan
+   id="tspan3118-9-5-9"
+   style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801">o</tspan></tspan></text>
+    <text
+       id="text3116-5-7-5-1"
+       y="18.667244"
+       x="41.317326"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="18.667244"
+         x="41.317326"
+         id="tspan3114-8-49-5-3"
+         sodipodi:role="line">W<tspan
+   style="font-style:italic;font-size:65%;baseline-shift:sub"
+   id="tspan2307">d</tspan></tspan></text>
+    <text
+       id="text3116-7-0-9-4"
+       y="21.375952"
+       x="31.860888"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="21.375952"
+         x="31.860888"
+         id="tspan3114-4-2-2-6"
+         sodipodi:role="line">U<tspan
+   id="tspan3118-8-4-977-0"
+   style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801">o</tspan></tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path3078-3-7-0"
+       d="m 33.670608,19.896771 v 2.435474"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.12;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <text
+       id="text3116-7-0-85-0-0"
+       y="21.375952"
+       x="33.811035"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.59735px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.119801"
+       xml:space="preserve"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         style="stroke-width:0.119801"
+         y="21.375952"
+         x="33.811035"
+         id="tspan3114-4-2-69-76-7"
+         sodipodi:role="line">B<tspan
+   id="tspan3118-8-4-98-5-1"
+   style="font-style:italic;font-size:1.03827px;baseline-shift:sub;stroke-width:0.119801">o</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.86013px;line-height:1.25;font-family:'Liberation Serif';-inkscape-font-specification:'Liberation Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.139509"
+       x="34.109581"
+       y="10.285625"
+       id="text13319-6-4-9"
+       inkscape:export-filename="LSTM_on_FPGA.png"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500"><tspan
+         sodipodi:role="line"
+         id="tspan13317-0-4-2"
+         x="34.109581"
+         y="10.285625"
+         style="stroke-width:0.139509"><tspan
+           style="font-style:italic;stroke-width:0.139509"
+           id="tspan3024-4-8">c</tspan><tspan
+           style="font-style:italic;font-size:1.20908px;baseline-shift:sub;stroke-width:0.139509"
+           id="tspan13325-0-9-7">t</tspan><tspan
+           style="font-size:1.20908px;baseline-shift:sub;stroke-width:0.139509"
+           id="tspan13327-9-9-3" /></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.23472px;line-height:1.25;font-family:serif;-inkscape-font-specification:'serif, Normal';stroke-width:0.264583"
+       x="35.057289"
+       y="26.276434"
+       id="text4754"><tspan
+         sodipodi:role="line"
+         id="tspan4752"
+         style="font-size:1.23472px;stroke-width:0.264583"
+         x="35.057289"
+         y="26.276434">delay</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.26896px;line-height:1.25;font-family:serif;-inkscape-font-specification:'serif, Normal';stroke-width:0.264584"
+       x="7.4586201"
+       y="10.229039"
+       id="text4959"
+       transform="scale(0.45672126,2.1895193)"><tspan
+         sodipodi:role="line"
+         id="tspan4957"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264584"
+         x="7.4586201"
+         y="10.229039">}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.26896px;line-height:1.25;font-family:serif;-inkscape-font-specification:'serif, Normal';stroke-width:0.264584"
+       x="-106.68523"
+       y="-6.040627"
+       id="text4959-5"
+       transform="matrix(-0.45671925,-0.001353,0.00648629,-2.1895097,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan4957-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif;stroke-width:0.264584"
+         x="-106.68523"
+         y="-6.040627">}</tspan></text>
+  </g>
+</svg>
