@@ -77,19 +77,18 @@ kernels = [layer.cell.kernel.numpy() for layer in smodel.layers[:-1]]
 elim_rule = EliminationRule(kernels)
 
 # TODO: Generalize this
-n1 = 80
-m1 = 256
-n2 = 104
-m2 = 160
-ranks = [min(n1, m1), min(n2, m2)]
+n1 = 51
+m1 = 200
+
+ranks = [min(n1, m1)]
 full_ranks = ranks.copy()
 # shape [layer, [left, right], [n, m]]
 weight_shapes = np.array(
-    [[[n1, ranks[0]], [ranks[0], m1]], [[n2, ranks[1]], [ranks[1], m2]]]
+    [[[n1, ranks[0]], [ranks[0], m1]]]
 )
 n_full_weights = (
-    weight_shapes[0, 0, 0] * weight_shapes[0, 1, 1]
-    + weight_shapes[1, 0, 0] * weight_shapes[1, 1, 1]
+    weight_shapes[0, 0] * weight_shapes[0, 1]
+    # + weight_shapes[1, 0, 0] * weight_shapes[1, 1, 1]
 )
 # ranks of each kernel (starts out full)
 
@@ -97,7 +96,7 @@ n_full_weights = (
 # loop values
 end_condition = False
 iteration = 1
-max_iters = ranks[0] + ranks[1]
+max_iters = sum(ranks)
 history = {
     "error": [full_model_error],
     "n_weights": [0],  # number of eliminated weights
@@ -150,7 +149,7 @@ while not end_condition:
     history["essential"].append(essential)
     history["error"].append(new_error)
     history["n_weights"].append(
-        (n1 - ranks[0]) * (m1 - ranks[0]) + (n2 - ranks[1]) * (m2 - ranks[1])
+        (n1 - ranks[0]) * (m1 - ranks[0])
     )
 
     # evaluate end condition
@@ -187,17 +186,25 @@ np.save("./svd reduction/heuristic.npy", heuristic_history)
 np.save("./svd reduction/is_essential.npy", essential_history)
 
 # make some plots
-sy = smodel.predict(X).flatten()
+
+X = test_batch_x
+y = test_batch_y
+t = t_test[0:400]
+
+sy = smodel.predict(test_batch_x).flatten()
 se = np.mean((y - sy) ** 2)
 
 print("singular error on test:", se)
-print("increase in error (percent):", (se - fe) / fe * 100)
+print("increase in error (percent):",
+      (se - full_model_error) / full_model_error * 100)
+
+full_model_test_prediction = model.predict(test_batch_x)
 
 # prediction of full and reduced model
 plt.figure(figsize=(6, 3.5))
-plt.plot(t, y, label="true")
-plt.plot(t, fy, label="full model")
-plt.plot(t, sy, label="singular model")
+plt.plot(t, y.squeeze(), label="true")
+plt.plot(t, full_model_test_prediction.squeeze(), label="full model")
+plt.plot(t, sy.squeeze(), label="singular model")
 plt.legend()
 plt.tight_layout()
 plt.xlabel("time (s)")
