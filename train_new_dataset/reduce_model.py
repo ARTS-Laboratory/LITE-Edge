@@ -66,7 +66,7 @@ fec = np.mean((test_batch_y - full_model_test_prediction) ** 2)
 
 # Relative to starting error,
 e_thresh = 0.005  # allowed increase in error for one sigma
-e_tot = 0.5  # allowable total error increase
+e_tot = 0.2  # allowable total error increase
 
 power = 2  # power of Taylor approximation
 
@@ -199,17 +199,32 @@ print("increase in error (percent):",
       (se - full_model_error) / full_model_error * 100)
 
 full_model_test_prediction = model.predict(test_batch_x)
+full_error = (y - full_model_test_prediction) ** 2
+reduced_error = (y - sy) ** 2
+
+plt.rcParams['font.family'] = 'serif'
+plt.rcParams['font.size'] = 12
 
 # prediction of full and reduced model
-plt.figure(figsize=(6, 3.5))
-plt.plot(t, y.squeeze(), label="true")
-plt.plot(t, full_model_test_prediction.squeeze(), label="full model")
-plt.plot(t, sy.squeeze(), label="singular model")
+plt.figure(figsize=(10, 6))
+plt.plot(t, y.squeeze(), label="true", linewidth=0.5)
+plt.plot(t, full_model_test_prediction.squeeze(), label="uncompressed")
+plt.plot(t, sy.squeeze(), label="reduced")
 plt.legend()
 plt.tight_layout()
 plt.xlabel("time (s)")
-plt.ylabel("pred")
+plt.ylabel(r'acceleration ($m/s^2$)')
 plt.savefig("./plots/prediction.png", dpi=300)
+
+# Error comparison between full and reduced model
+plt.figure(figsize=(10, 6))
+plt.plot(t, full_error.squeeze(), label="uncompressed", color='orange')
+plt.plot(t, reduced_error.squeeze(), label="reduced", color='green')
+plt.legend()
+plt.tight_layout()
+plt.xlabel("time (s)")
+plt.ylabel(r'error')
+plt.savefig("./plots/error.png", dpi=300)
 
 # error history
 
@@ -222,6 +237,7 @@ plt.plot(
 plt.tight_layout()
 plt.xlabel("weights eliminated")
 plt.ylabel("error increase")
+plt.savefig("./plots/elimination-history.png", dpi=300)
 # make the reduced model
 keep_sigmas = elim_rule.kernel_mask
 rmodel = make_LSTM_reduced_model(smodel, keep_sigmas, kernel_type=2)
