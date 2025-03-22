@@ -191,7 +191,7 @@ X = test_batch_x
 y = test_batch_y
 t = t_test[0:400]
 
-sy = smodel.predict(test_batch_x).flatten()
+sy = smodel.predict(test_batch_x)
 se = np.mean((y - sy) ** 2)
 
 print("singular error on test:", se)
@@ -203,31 +203,32 @@ full_error = (y - full_model_test_prediction) ** 2
 reduced_error = (y - sy) ** 2
 
 plt.rcParams['font.family'] = 'serif'
+plt.rcParams['font.serif'] = ['CMU Serif']
+plt.rcParams['mathtext.fontset'] = 'cm'
 plt.rcParams['font.size'] = 12
 
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 6))
+
 # prediction of full and reduced model
-plt.figure(figsize=(10, 6))
-plt.plot(t, y.squeeze(), label="true", linewidth=0.5)
-plt.plot(t, full_model_test_prediction.squeeze(), label="uncompressed")
-plt.plot(t, sy.squeeze(), label="reduced")
-plt.legend()
-plt.tight_layout()
-plt.xlabel("time (s)")
-plt.ylabel(r'acceleration ($m/s^2$)')
-plt.savefig("./plots/prediction.png", dpi=300)
+ax1.plot(t, y.squeeze(), label="measured", linewidth=1, color='#2ca02c')
+ax1.plot(t, full_model_test_prediction.squeeze(), linewidth=0.8, label="uncompressed", color='#1f77b4')
+ax1.plot(t, sy.squeeze(), label="reduced", linewidth=0.8, color='#ff7f0e')
+ax1.legend()
+ax1.grid(True)
+ax1.set_xlabel("time (s) - (a)")
+ax1.set_ylabel(r'acceleration ($\text{G}$)')
 
 # Error comparison between full and reduced model
-plt.figure(figsize=(10, 6))
-plt.plot(t, full_error.squeeze(), label="uncompressed", color='orange')
-plt.plot(t, reduced_error.squeeze(), label="reduced", color='green')
-plt.legend()
+ax2.plot(t, full_error.squeeze(), label="uncompressed", linewidth=0.8, color='#1f77b4')
+ax2.plot(t, reduced_error.squeeze(), label="reduced", linewidth=0.8, color='#ff7f0e')
+ax2.legend()
+ax2.grid(True)
+ax2.set_xlabel("time (s) - (b)")
+ax2.set_ylabel(r'error ($\text{G}^2$)')
 plt.tight_layout()
-plt.xlabel("time (s)")
-plt.ylabel(r'error')
-plt.savefig("./plots/error.png", dpi=300)
+plt.savefig("./plots/comparison-plot.png", dpi=300)
 
 # error history
-
 error_increase = (error_history - fec) / fec * 100
 plt.figure(figsize=(4, 3))
 plt.plot(

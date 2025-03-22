@@ -1058,6 +1058,10 @@ def make_LSTM_reduced_model(
             B = (w_left * kernel) @ V1
             C = np.linalg.inv(V1) @ V2
 
+            print('Rank:', r)
+            print('B shape:', B.shape)
+            print('C shape:', C.shape)
+
             cell = ReducedLSTMCell(units, w=[B, C], b=b, kernel_type=2)
             lstm = SingularLSTM(units, cell=cell, return_sequences=True)
             rmodel.add(lstm)
