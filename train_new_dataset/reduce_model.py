@@ -215,15 +215,15 @@ ax1.plot(t, full_model_test_prediction.squeeze(), linewidth=0.8, label="uncompre
 ax1.plot(t, sy.squeeze(), label="reduced", linewidth=0.8, color='#ff7f0e')
 ax1.legend()
 ax1.grid(True)
-ax1.set_xlabel("time (s) - (a)")
-ax1.set_ylabel(r'acceleration ($\text{G}$)')
+ax1.set_xlabel("time (s)\n(a)")
+ax1.set_ylabel(r'$\text{g}_\text{n}$ ($\text{G}$)')
 
 # Error comparison between full and reduced model
 ax2.plot(t, full_error.squeeze(), label="uncompressed", linewidth=0.8, color='#1f77b4')
 ax2.plot(t, reduced_error.squeeze(), label="reduced", linewidth=0.8, color='#ff7f0e')
 ax2.legend()
 ax2.grid(True)
-ax2.set_xlabel("time (s) - (b)")
+ax2.set_xlabel("time (s)\n(b)")
 ax2.set_ylabel(r'error ($\text{G}^2$)')
 plt.tight_layout()
 plt.savefig("./plots/comparison-plot.png", dpi=300)
