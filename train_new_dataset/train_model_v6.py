@@ -103,39 +103,15 @@ def export_binary(model, savpath = "./model_binaries"):
         bc = b[units*2:units*3].flatten()
         bo = b[units*3:].flatten()
         
-        # Write weight matrices
-        with open(layer_path + 'wI.dat', 'wb') as file:
-            for weight in wi:
-                file.write(struct.pack('f', weight))
+        wi.astype('<f4').tofile(layer_path + 'wI.dat')
+        wf.astype('<f4').tofile(layer_path + 'wF.dat')
+        wc.astype('<f4').tofile(layer_path + 'wC.dat')
+        wo.astype('<f4').tofile(layer_path + 'wO.dat')
 
-        with open(layer_path + 'wF.dat', 'wb') as file:
-            for weight in wf:
-                file.write(struct.pack('f', weight))
-
-        with open(layer_path + 'wC.dat', 'wb') as file:
-            for weight in wc:
-                file.write(struct.pack('f', weight))
-
-        with open(layer_path + 'wO.dat', 'wb') as file:
-            for weight in wo:
-                file.write(struct.pack('f', weight))
-
-        # Write bias vectors
-        with open(layer_path + 'bI.dat', 'wb') as file:
-            for weight in bi:
-                file.write(struct.pack('f', weight))
-
-        with open(layer_path + 'bF.dat', 'wb') as file:
-            for weight in bf:
-                file.write(struct.pack('f', weight))
-
-        with open(layer_path + 'bC.dat', 'wb') as file:
-            for weight in bc:
-                file.write(struct.pack('f', weight))
-
-        with open(layer_path + 'bO.dat', 'wb') as file:
-            for weight in bo:
-                file.write(struct.pack('f', weight))
+        bi.astype('<f4').tofile(layer_path + 'bI.dat')
+        bf.astype('<f4').tofile(layer_path + 'bF.dat')
+        bc.astype('<f4').tofile(layer_path + 'bC.dat')
+        bo.astype('<f4').tofile(layer_path + 'bO.dat')
 
     #save dense top layer
     dense_top = model.layers[-1]
@@ -144,13 +120,8 @@ def export_binary(model, savpath = "./model_binaries"):
     if(not path.exists(layer_path)):
         os.mkdir(layer_path)
 
-    with open(layer_path + 'w.dat', 'wb') as file:
-        for weight in in_weights:
-            file.write(struct.pack('f', weight))
-
-    with open(layer_path + 'b.dat', 'wb') as file:
-        for weight in out_weights:
-            file.write(struct.pack('f', weight))
+    in_weights.astype('<f4').tofile(layer_path + 'w.dat')
+    out_weights.astype('<f4').tofile(layer_path + 'b.dat')
 
 #%% load test and train data
 
