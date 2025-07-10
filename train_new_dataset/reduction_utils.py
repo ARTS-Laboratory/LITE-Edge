@@ -72,3 +72,13 @@ class EliminationRule:
                     h_eliminate = h
 
         return (hlayer_eliminate, hindex_eliminate), h_eliminate
+
+
+def gen_bc(u, s, vt, r):
+    u1 = u[:r, :r]
+    u2 = u[r:, :r]
+
+    B = u1 @ s @ vt
+    C = u2 @ np.linalg.inv(u1)
+
+    return B, C
