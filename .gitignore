@@ -164,3 +164,4 @@ cython_debug/
 train_new_dataset/merged_reductions
 train_new_dataset/model_saves
 train_new_dataset/model_saves
+train_new_dataset/model_binaries
