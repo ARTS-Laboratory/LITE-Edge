@@ -9,6 +9,7 @@ from svd_classes import ReducedLSTMCell, SingularLSTM
 from reduction_utils import compute_gradients, EliminationRule, gen_bc
 import os
 from training_utils import TrainingGenerator
+from export_model import export_binary
 
 # tf.compat.v1.disable_eager_execution()
 from svd_classes import make_LSTM_singular_model, make_LSTM_reduced_model
@@ -32,6 +33,8 @@ w, u, bias = model.layers[0].get_weights()
 print(w.shape)
 print(u.shape)
 print(bias.shape)
+
+export_binary(model)
 
 merged_w = np.append(w, u, axis=0).T
 print('merged_w:', merged_w.shape)
