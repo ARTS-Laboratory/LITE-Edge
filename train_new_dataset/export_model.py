@@ -18,15 +18,14 @@ def export_model(model, savpath = "./model_binaries"):
         wc = np.hstack((W[:,units*2:units*3].T, U[:,units*2:units*3].T)).flatten()
         wo = np.hstack((W[:,units*3:].T, U[:,units*3:].T)).flatten()
 
+        w = np.hstack((wi, wf, wc, wo))
+
         bi = b[:units].flatten()
         bf = b[units:units*2].flatten()
         bc = b[units*2:units*3].flatten()
         bo = b[units*3:].flatten()
         
-        wi.astype('<f4').tofile(layer_path + 'wI.dat')
-        wf.astype('<f4').tofile(layer_path + 'wF.dat')
-        wc.astype('<f4').tofile(layer_path + 'wC.dat')
-        wo.astype('<f4').tofile(layer_path + 'wO.dat')
+        w.astype('<f4').tofile(layer_path + 'w.dat')
 
         bi.astype('<f4').tofile(layer_path + 'bI.dat')
         bf.astype('<f4').tofile(layer_path + 'bF.dat')
