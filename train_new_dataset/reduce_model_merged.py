@@ -84,7 +84,8 @@ for i in range(1, matrix_rank):
     data_out = 'merged_reductions/rank_' + str(target_rank)
     os.makedirs(data_out, exist_ok=True)
 
-    np.hstack((b.flatten(), c.flatten())).astype('<f4').tofile(data_out + '/w.dat')
+    b.flatten().astype('<f4').tofile(data_out + '/b.dat')
+    c.flatten().astype('<f4').tofile(data_out + '/c.dat')
     np.savetxt(data_out + '/reduced.csv', reduced_prediction)
 
 data_out = 'merged_reductions'
