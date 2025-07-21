@@ -84,12 +84,13 @@ for i in range(1, matrix_rank):
     reduced_prediction = reduced_model.predict(window_x).squeeze()
     error[i] = np.mean((full_prediction - reduced_prediction) ** 2)
 
-    data_out = 'merged_reductions/rank_' + str(target_rank)
+    data_out = 'merged_reductions/rank_' + str(target_rank) + '/'
     os.makedirs(data_out, exist_ok=True)
 
-    b.flatten().astype('<f4').tofile(data_out + '/b.dat')
-    c.flatten().astype('<f4').tofile(data_out + '/c.dat')
-    np.savetxt(data_out + '/reduced.csv', reduced_prediction)
+    np.int8(target_rank).tofile(data_out + 'rank.dat')
+    b.flatten().astype('<f4').tofile(data_out + 'b.dat')
+    c.flatten().astype('<f4').tofile(data_out + 'c.dat')
+    np.savetxt(data_out + 'reduced.csv', reduced_prediction)
 
 data_out = 'merged_reductions'
 np.savetxt(data_out + '/measured.csv', np.array(window_x).squeeze())
