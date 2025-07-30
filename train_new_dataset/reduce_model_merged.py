@@ -14,15 +14,15 @@ from export_model import export_binary
 # tf.compat.v1.disable_eager_execution()
 from svd_classes import make_LSTM_singular_model, make_LSTM_reduced_model
 tf.config.run_functions_eagerly(True)
-X_test = np.load("./dataset/V4/X_test.npy").reshape(1, -1, 1)
-Y_test = np.load("./dataset/V4/Y_test.npy").reshape(1, -1, 1)
+X_test = np.load('../dataset/benchtop_test_v6/Test 3/package.npy').reshape(1, -1, 1)
+Y_test = np.load('../dataset/benchtop_test_v6/Test 3/reference.npy').reshape(1, -1, 1)
 
-testing_batches = TrainingGenerator(X_test, Y_test, train_len=400)
+# testing_batches = TrainingGenerator(X_test, Y_test, train_len=400 * 30)
+#
+# test_batch_x, test_batch_y = testing_batches[random.randint(0, len(testing_batches) - 1)]
 
-test_batch_x, test_batch_y = testing_batches[random.randint(0, len(testing_batches) - 1)]
-
-window_x = test_batch_x
-window_y = test_batch_y
+window_x = X_test
+window_y = Y_test
 
 model = keras.models.load_model("./model_saves/model")
 full_prediction = model.predict(window_x).squeeze()
@@ -41,6 +41,7 @@ print('merged_w:', merged_w.shape)
 matrix_rank =  np.linalg.matrix_rank(merged_w)
 
 error = np.zeros(matrix_rank, dtype=np.float32)
+error[0] = np.mean((Y_test.squeeze() - full_prediction) ** 2)
 
 for i in range(1, matrix_rank):
     u, s, vt = np.linalg.svd(merged_w)
@@ -82,7 +83,7 @@ for i in range(1, matrix_rank):
     )
 
     reduced_prediction = reduced_model.predict(window_x).squeeze()
-    error[i] = np.mean((full_prediction - reduced_prediction) ** 2)
+    error[i] = np.mean((Y_test.squeeze() - reduced_prediction) ** 2)
 
     data_out = 'merged_reductions/rank_' + str(target_rank) + '/'
     os.makedirs(data_out, exist_ok=True)
