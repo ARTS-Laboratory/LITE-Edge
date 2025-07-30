@@ -1,12 +1,12 @@
 import time
 import math
-import struct
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 import tensorflow.keras as keras
 from sklearn.metrics import mean_squared_error
 from training_utils import TrainingGenerator
+import os
 """
 Changing to V4 dataset
 Training:
@@ -125,22 +125,22 @@ def export_binary(model, savpath = "./model_binaries"):
 
 #%% load test and train data
 
-X_train = np.load('../dataset/benchtop_test_v6/Test 1/package.npy').reshape(1, -1, 1)
-Y_train = np.load('../dataset/benchtop_test_v6/Test 1/reference.npy').reshape(1, -1, 1)
+X_train = np.load('../dataset/benchtop_test_v6/Test 2/package.npy').reshape(1, -1, 1)
+Y_train = np.load('../dataset/benchtop_test_v6/Test 2/reference.npy').reshape(1, -1, 1)
 X_test = np.load('../dataset/benchtop_test_v6/Test 2/package.npy').reshape(1, -1, 1)
 Y_test = np.load('../dataset/benchtop_test_v6/Test 2/reference.npy').reshape(1, -1, 1)
 
-fs = X_train.shape[1]
+# fs = X_train.shape[1]
+#
+# X_train = X_train[:,:fs//2].reshape(10, -1, 1)
+# Y_train = Y_train[:,:fs//2].reshape(10, -1, 1)
+#
+#
+# t_train = np.array([1/400*i for i in range(X_train.shape[1])])
+# t_test = np.array([1/400*i for i in range(X_test.shape[1])])
 
-X_train = X_train[:,:fs//2].reshape(10, -1, 1)
-Y_train = Y_train[:,:fs//2].reshape(10, -1, 1)
 
-
-t_train = np.array([1/400*i for i in range(X_train.shape[1])])
-t_test = np.array([1/400*i for i in range(X_test.shape[1])])
-
-
-training_generator = TrainingGenerator(X_train, Y_train, train_len=400)
+training_generator = TrainingGenerator(X_train, Y_train, train_len=100)
 #%% create LSTM models and callbacks
 UNITS = 50
 
@@ -183,7 +183,7 @@ start_train_time = time.perf_counter()
 model.fit(
     training_generator,
     shuffle=True,
-    epochs=70,
+    epochs=100,
     # validation_data = (X_test, Y_test),
     callbacks=[checkpoint],
 )
@@ -227,35 +227,37 @@ print("with model correction: ")
 print("SNR: %f dB"%model_snr)
 print("RMSE: %f"%model_rmse)
 
-plt.figure(figsize=(6, 2.5))
-plt.plot(t_test[:x_test.size], x_test, label='package')
-plt.plot(t_test[:x_test.size], y_pred, label='prediction')
-plt.plot(t_test[:x_test.size], y_test, label='reference')
-plt.plot()
-plt.legend(loc=1)
-plt.tight_layout()
+# plt.figure(figsize=(6, 2.5))
+# plt.plot(t_test[:x_test.size], x_test, label='package')
+# plt.plot(t_test[:x_test.size], y_pred, label='prediction')
+# plt.plot(t_test[:x_test.size], y_test, label='reference')
+# plt.plot()
+# plt.legend(loc=1)
+# plt.tight_layout()
 
 # np.save("./model_predictions/Y_pred.npy", y_pred)
 #%% prediction on training data
 plt.close('all')
-Y_pred = model.predict(X_train)
+Y_pred = model.predict(X_test).squeeze()
+os.makedirs('results', exist_ok=True)
+np.savetxt('results/uncompressed', Y_pred)
 
-for x_train, y_train, y_pred in zip(X_train, Y_train, Y_pred):
-    pkg_snr = signaltonoise(y_train, x_train)
-    pkg_rmse = mean_squared_error(y_train, x_train, squared=False)
-    model_snr = signaltonoise(y_train, y_pred)
-    model_rmse = mean_squared_error(y_train, y_pred, squared=False)
-    print("package accelerometer: ")
-    print("SNR: %f"%pkg_snr)
-    print("RMSE: %f"%pkg_rmse)
-    print("with model correction: ")
-    print("SNR: %f dB"%model_snr)
-    print("RMSE: %f"%model_rmse)
-    
-    plt.figure(figsize=(6, 2.5))
-    plt.plot(t_train, x_train, label='package')
-    plt.plot(t_train, y_pred, label='prediction')
-    plt.plot(t_train, y_train, label='reference')
-    plt.plot()
-    plt.legend(loc=1)
-    plt.tight_layout()
+# for x_train, y_train, y_pred in zip(X_train, Y_train, Y_pred):
+#     pkg_snr = signaltonoise(y_train, x_train)
+#     pkg_rmse = mean_squared_error(y_train, x_train, squared=False)
+#     model_snr = signaltonoise(y_train, y_pred)
+#     model_rmse = mean_squared_error(y_train, y_pred, squared=False)
+#     print("package accelerometer: ")
+#     print("SNR: %f"%pkg_snr)
+#     print("RMSE: %f"%pkg_rmse)
+#     print("with model correction: ")
+#     print("SNR: %f dB"%model_snr)
+#     print("RMSE: %f"%model_rmse)
+#
+#     plt.figure(figsize=(6, 2.5))
+#     plt.plot(t_train, x_train, label='package')
+#     plt.plot(t_train, y_pred, label='prediction')
+#     plt.plot(t_train, y_train, label='reference')
+#     plt.plot()
+#     plt.legend(loc=1)
+#     plt.tight_layout()
