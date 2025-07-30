@@ -35,6 +35,21 @@ def main():
 
     np.save('./Test 2/reference.npy', input)
     np.save('./Test 2/package.npy', output)
+
+    input = np.genfromtxt('./Test 3/input.csv')
+    output = np.genfromtxt('./Test 3/output.csv')
+
+    input, output = normalize_data(input, output)
+
+    input, output = align_data(input, output)
+
+    x = range(input.size)
+    plt.plot(x, input)
+    plt.plot(x, output)
+    plt.show()
+
+    np.save('./Test 3/reference.npy', input)
+    np.save('./Test 3/package.npy', output)
     
 
 # Aligns the reference and package signals using cross correlation
