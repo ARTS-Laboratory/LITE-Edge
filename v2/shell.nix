@@ -20,6 +20,7 @@ pkgs.mkShell {
       matplotlib # 3.10.3
       pandas # 2.2.3
       scipy # 1-16.0
+      keras
      ])) 
     ];
 }
