@@ -8,7 +8,8 @@ from random import shuffle
 
 # Splits the dataset into a series of windows of a given size
 class WindowGenerator(keras.utils.PyDataset):
-    def __init__(self, x: np.ndarray, y: np.ndarray, window_size: int=1200):
+    def __init__(self, x: np.ndarray, y: np.ndarray, window_size: int=1200, **kwargs):
+        super().__init__(**kwargs)
         self.window_size = window_size
         self.x = x
         self.y = y
