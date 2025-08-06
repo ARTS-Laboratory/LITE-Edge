@@ -25,5 +25,7 @@ model.compile(
 model.fit(
         windows,
         shuffle=True,
-        epochs=20
+        epochs=3
         )
+
+model.save('./model.keras')

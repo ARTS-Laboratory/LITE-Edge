@@ -12,12 +12,9 @@ class WindowGenerator(keras.utils.PyDataset):
         self.window_size = window_size
         self.x = x
         self.y = y
-        print(len(self.x))
-        print(self.x)
 
 
     def __len__(self):
-        print(ceil(len(self.x) / self.window_size))
         return ceil(self.x.size / self.window_size)
 
 
