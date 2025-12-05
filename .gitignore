@@ -166,3 +166,4 @@ train_new_dataset/model_saves
 train_new_dataset/model_saves
 train_new_dataset/model_binaries
 v2/model.keras
+v2/.direnv
