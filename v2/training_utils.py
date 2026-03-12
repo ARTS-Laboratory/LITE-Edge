@@ -1,4 +1,4 @@
-# Copyright (c) UofSC ARTS Lab, 2025
+# Copyright (c) UofSC ARTS Lab, 2025 - 2026
 # Classes and tools used for training the model
 
 import keras

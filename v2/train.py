@@ -1,4 +1,4 @@
-# Copyright (c) UofSC ARTS Lab, 2025
+# Copyright (c) UofSC ARTS Lab, 2025 - 2026
 # Signal Compensation LSTM model training
 
 import keras
