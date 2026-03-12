@@ -43,3 +43,7 @@ def main():
                 epochs=100
                 )
         model.save('./ax' + str(q) + '.keras')
+
+
+if __name__ == '__main__':
+	main()
