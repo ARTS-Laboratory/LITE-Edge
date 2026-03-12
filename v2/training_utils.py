@@ -25,7 +25,7 @@ class WindowGenerator(keras.utils.Sequence):
                 self.y[:,index * self.window_size: index * self.window_size + self.window_size,:])
 
 # Apply butterworth filter to the package dataset.
-def filter(package_data: np.ndarray, N: int) -> np.ndarray:
+def ax_filter(package_data: np.ndarray, N: int) -> np.ndarray:
     # For our purposes, we will hardcode the critical frequency to 10Hz, which
     # is in the middle of our frequency range of interest. We will also fix
     # the frequency to 400Hz.
