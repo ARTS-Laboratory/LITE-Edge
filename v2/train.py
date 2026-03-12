@@ -6,20 +6,19 @@ import numpy as np
 import scipy.signal as signal
 from training_utils import WindowGenerator, ax_filter
 
-input_data = np.load('./../dataset/benchtop_test_v6/Test 2/package.npy')
+def main():
+    input_data = np.load('./../dataset/benchtop_test_v6/Test 2/package.npy')
+    input_filtered = ax_filter(input_data, 1)
+    output_data = np.load('./../dataset/benchtop_test_v6/Test 2/reference.npy').reshape(1, -1, 1)
+    windows = WindowGenerator(input_filtered, output_data, window_size=1200)
 
-input_filtered = ax_filter(input_data, 1)
-output_data = np.load('./../dataset/benchtop_test_v6/Test 2/reference.npy').reshape(1, -1, 1)
+    # These provide the N value of the butterworth filter. Conceptually, the lower
+    # this value is, the higher the quality of the virtual accelerometer. This is
+    # because the filtering effect in the lower frequencies is less dramatic.
 
-windows = WindowGenerator(input_filtered, output_data, window_size=1200)
+    qualities = [1, 2, 3, 4, 5]
 
-# These provide the N value of the butterworth filter. Conceptually, the lower
-# this value is, the higher the quality of the virtual accelerometer. This is
-# because the filtering effect in the lower frequencies is less dramatic.
-
-qualities = [1, 2, 3, 4, 5]
-
-for q in qualities:
+    for q in qualities:
         input_filtered = ax_filter(input_data, q)
         model = keras.Sequential([
             keras.layers.Input(shape=(None,1)),
