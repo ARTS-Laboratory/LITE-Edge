@@ -21,3 +21,34 @@ def convert_to_rank(matrix: np.ndarray, r: int) -> (np.ndarray, np.ndarray, np.n
 	reduced_vt = vt[:target_rank, :]
 
 	return reduced_u @ reduced_s @ reduced_vt, reduced_u, reduced_s, reduced_vt
+
+
+
+# Compute the T and B matrices for the counterpoint expansion of a matrix.
+def counterpoint(marix: np.ndarray) -> (np.ndarray, np.ndarray):
+	u, s, _ = np.linagl.svd(matrix)
+
+	# Should be a little faster than finding the rank of matrix directly
+	r = np.linalg.matrix_rank(s, hermitian=True)
+
+	t = matrix[:r]
+
+	u1 = u[:r,:r]
+	u2 = u[r:,:r]
+
+	b = u2 @ np.linalg.inv(u1)
+
+	return t, b
+
+# Compute the T and B matrices for the counterpoint expansion of a matrix from
+# its SVD
+def counterpoint(u: np.ndarray, s: np.ndarray, vt: np.ndarray) -> (np.ndarray, np.ndarray):
+	r = np.linalg.matrix_rank(s, hermitian=True)
+
+	u1 = u[:r,:r]
+	u2 = u[r:,:r]
+
+	t = u1 @ s @ vt
+	b = u2 @ np.linalg.inv(u1)
+
+	return t, b
