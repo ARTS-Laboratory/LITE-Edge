@@ -40,6 +40,7 @@ def counterpoint(marix: np.ndarray) -> (np.ndarray, np.ndarray):
 
 	return t, b
 
+
 # Compute the T and B matrices for the counterpoint expansion of a matrix from
 # its SVD
 def counterpoint(u: np.ndarray, s: np.ndarray, vt: np.ndarray) -> (np.ndarray, np.ndarray):
@@ -52,3 +53,10 @@ def counterpoint(u: np.ndarray, s: np.ndarray, vt: np.ndarray) -> (np.ndarray, n
 	b = u2 @ np.linalg.inv(u1)
 
 	return t, b
+
+
+# Perform matrix-vector multiplication using the counterpoint expansion
+def counterpoint_matvec(t: np.ndarray, b: np.ndarray, x: np.array) -> np.array:
+	tx = t @ x
+
+	return np.hstack([tx, b @ tx])
